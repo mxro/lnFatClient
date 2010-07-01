@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		%header%
+		<title>%title%</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="%pathto(styles.css)%"  />
+		<link rel="stylesheet" type="text/css" media="print" href="%pathto(print.css)%"  />
+		%style_variations%
+	
+		%user_styles%
+		
+		%user_javascript%
+	</head>
+
+  <body>
+<!-- ##### Header ##### -->
+
+    <div id="header">
+      <div class="midHeader">
+        <h1 class="headerTitle">%site_title%</h1>
+      </div>
+
+      <div class="subHeader">
+		<div id="slogan">%site_slogan%</div>
+      </div>
+    </div>
+
+    <!-- ##### Side Bar ##### -->
+
+    <div id="side-bar">
+      <div>
+			%toolbar%
+      </div>
+
+      <div class="lighterBackground">
+        <p class="sideBarTitle">%sidebar_title%</p>
+        <span class="sideBarText">
+          %sidebar%<br />
+          %plugin_sidebar%
+        </span>
+  
+      </div>
+    </div>
+
+    <!-- ##### Main Copy ##### -->
+
+    <div id="main-copy">
+		%content%
+    </div>
+    
+    <!-- ##### Footer ##### -->
+
+    <div id="footer">
+      <div class="left">
+		%footer%
+      </div>
+    </div>
+  </body>
+</html>

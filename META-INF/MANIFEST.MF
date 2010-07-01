@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Embed-Directory: target/dependency
+Ignore-Package: com.thoughtworks.xstream.io,com.thoughtworks.xstream.c
+ onverters,com.thoughtworks.xstream.annotations,org.openide.util,com.t
+ houghtworks.xstream.io.xml,com.thoughtworks.xstream.mapper,com.though
+ tworks.xstream,org.junit
+Bundle-ClassPath: .,target/dependency/wizard-1.0.0.jar,target/dependen
+ cy/inclXStream-0.0.4-SNAPSHOT.jar
+Built-By: mx
+Tool: Bnd-0.0.357
+Bundle-Name: lnFatClient
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.6.0_20
+Bundle-Version: 0.0.1.SNAPSHOT
+Bnd-LastModified: 1277958717103
+Bundle-ManifestVersion: 2
+Import-Package: com.hp.hpl.jena.ontology,com.hp.hpl.jena.rdf.model,com
+ .hp.hpl.jena.shared,com.sun.org.apache.xml.internal.serialize;resolut
+ ion:=optional,de.linnk.domain,de.linnk.gwt,de.linnk.netbeansguis,de.m
+ xro.filesystem,de.mxro.filesystem.ext,de.mxro.filesystem.v01,de.mxro.
+ image,de.mxro.jena,de.mxro.jmyspell,de.mxro.shef,de.mxro.string.filte
+ r,de.mxro.swing,de.mxro.swing.actions,de.mxro.swing.dialogwizard,de.m
+ xro.transferable,de.mxro.utils,de.mxro.utils.application,de.mxro.util
+ s.background,de.mxro.utils.distributedtree,de.mxro.utils.domain,de.mx
+ ro.utils.drm,de.mxro.utils.gwt,de.mxro.utils.history,de.mxro.utils.lo
+ g,de.mxro.utils.log.impl,de.mxro.utils.progress,de.mxro.xml,de.mxro.x
+ ml.style,de.mxro.xstream,de.mxro.xstream.definitions,de.mxro.xstream.
+ filesystem.v01,javax.accessibility,javax.imageio,javax.swing,javax.sw
+ ing.border,javax.swing.colorchooser,javax.swing.event,javax.swing.fil
+ echooser,javax.swing.table,javax.swing.text,javax.swing.text.rtf,java
+ x.swing.tree,javax.xml.parsers,javax.xml.transform,javax.xml.transfor
+ m.dom,javax.xml.transform.stream,net.iharder.dnd,org.dom4j.io,org.dts
+ .spell.swing,org.jdesktop.layout,org.w3c.dom,org.w3c.tidy,org.xml.sax
+ ,org.xml.sax.helpers,thewebsemantic,thewebsemantic.vocabulary
+Embed-Dependency: wizard;inline=false,inclXStream;inline=false
+Bundle-SymbolicName: lnFatClient
+

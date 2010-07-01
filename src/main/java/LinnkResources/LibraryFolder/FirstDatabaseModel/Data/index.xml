@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href='index.xsl' type='text/xsl'?>
+<linnkcontent version="1.0"><v01.linnkdocument><creator>maxrohde</creator><created>2007-06-18 15:48:52.674 CEST</created><item class="v01.titleitem"><title>Your Database</title><creator>maxrohde</creator><created>2007-06-18 15:49:02.140 CEST</created><id>title</id></item><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    Linnk created a database for you. You can create your own databases by 
+    File / New Database.&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML><div xmlns="http://www.w3.org/1999/xhtml">Linnk created a database for you. You can create your own databases by File / New Database.<br/></div></textXML><creator>maxrohde</creator><created>2007-06-19 19:13:53.298 CEST</created><id>TextItem</id></item><item class="v01.ext.hyperlinkproxy"><hyperlink>http://www.mxdt.de/davread/My_Applications/Linnk/Documentation/Documentation.html</hyperlink><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    Documentation &amp;amp; First Steps&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML><div xmlns="http://www.w3.org/1999/xhtml">Documentation &amp; First Steps<br/></div></textXML><creator>maxrohde</creator><created>2007-06-19 19:14:22.890 CEST</created><id>TextItem1</id></item><creator>maxrohde</creator><created>2007-06-19 19:14:22.890 CEST</created><id>HyperlinkProxy</id></item><versions><currentVersion>7</currentVersion><change class="v03.newitem"><type>REVERSIBLE</type><item class="v01.titleitem"><title>index</title><creator>maxrohde</creator><created>2007-06-18 15:48:52.674 CEST</created><id>title</id></item><user>maxrohde</user><date>2007-06-18 15:48:52.674 CEST</date></change><change class="v03.newitem"><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;&lt;body&gt;enter text here ...&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</text><textXML/><creator>maxrohde</creator><created>2007-06-18 15:49:01.967 CEST</created><id>TextItem</id></item><user>maxrohde</user><date>2007-06-18 15:49:01.967 CEST</date></change><change class="v03.modifyitem"><olditem class="v01.titleitem" reference="../../change/item"/><type reference="../../change/type"/><item class="v01.titleitem" reference="../../../item"/><user>maxrohde</user><date>2007-06-18 15:49:02.140 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[2]/item"/><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    Linnk created a database for you. You can create your own databases by 
+    File / New Database.&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML/><creator>maxrohde</creator><created>2007-06-18 15:49:44.49 CEST</created><id>TextItem</id></item><user>maxrohde</user><date>2007-06-18 15:49:44.49 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[4]/item"/><type reference="../../change/type"/><item class="v02.textitem" reference="../../../item[2]"/><user>maxrohde</user><date>2007-06-19 19:13:53.298 CEST</date></change><change class="v03.newitem"><type reference="../../change/type"/><item class="v01.ext.hyperlinkproxy"><hyperlink>http://www.mxdt.de/davread/My_Applications/Linnk/Documentation/Documentation.html</hyperlink><item class="v02.textitem" reference="../../../../item[3]/item"/><creator>maxrohde</creator><created>2007-06-19 19:14:13.8 CEST</created><id>HyperlinkProxy</id></item><user>maxrohde</user><date>2007-06-19 19:14:13.8 CEST</date></change><change class="v03.modifyitem"><olditem class="v01.ext.hyperlinkproxy" reference="../../change[6]/item"/><type reference="../../change/type"/><item class="v01.ext.hyperlinkproxy" reference="../../../item[3]"/><user>maxrohde</user><date>2007-06-19 19:14:22.890 CEST</date></change></versions><name>index</name><filename>index.xml</filename></v01.linnkdocument></linnkcontent>

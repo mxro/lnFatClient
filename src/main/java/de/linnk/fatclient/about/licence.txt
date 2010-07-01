@@ -1,0 +1,8 @@
+Copyright Max Rohde, 2009.
+
+All rights reserved.
+
+The Application Linnk is provided "as is". 
+Absolutely no warranty of any sort, express or implied, is provided. 
+The author of this program is not responsible for data loss or any other type of damage this software may do to your system. 
+By using this software, you agree to run it AT YOUR OWN RISK.

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href='First_Steps.xsl' type='text/xsl'?>
+<linnkcontent version="1.0"><v01.linnkdocument><creator>maxrohde</creator><created>2007-06-13 15:14:02.923 CEST</created><item class="v01.titleitem"><title>First Steps</title><creator>maxrohde</creator><created>2007-06-13 15:14:06.882 CEST</created><id>title</id></item><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    Welcome to Linnk!&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML><div xmlns="http://www.w3.org/1999/xhtml">Welcome to Linnk!<br/></div></textXML><creator>maxrohde</creator><created>2007-06-13 17:59:25.886 CEST</created><id>TextItem</id></item><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    This program only makes sense, if you use keystrokes! Here is a list:&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML><div xmlns="http://www.w3.org/1999/xhtml">This program only makes sense, if you use keystrokes! Here is a list:<br/></div></textXML><creator>maxrohde</creator><created>2007-06-13 15:15:31.586 CEST</created><id>TextItem1</id></item><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    alt + down: insert a new item after select item &lt;br&gt;ctrl + up: select 
+    previous item&lt;br&gt;ctrl + down: select following item/ create one if none 
+    existent&lt;br&gt;ctrl + alt + right: create a new document and link it with 
+    currently selected item (action also known als Linnk! ;) &lt;br&gt;ctrl + alt + 
+    left: creates a list with currently selected item as heading &lt;br&gt;ctrl + 
+    right: goes to document which is linked with currently selected item &lt;br&gt;ctrl 
+    + left: show previously viewed document &lt;br&gt;ctrl + alt + up: move 
+    currently selected item up &lt;br&gt;ctrl + alt + down: move currently selected 
+    item down&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML><div xmlns="http://www.w3.org/1999/xhtml">alt + down: insert a new item after select item <br/>ctrl + up: select previous item<br/>ctrl + down: select following item/ create one if none existent<br/>ctrl + alt + right: create a new document and link it with currently selected item (action also known als Linnk! ;) <br/>ctrl + alt + left: creates a list with currently selected item as heading <br/>ctrl + right: goes to document which is linked with currently selected item <br/>ctrl + left: show previously viewed document <br/>ctrl + alt + up: move currently selected item up <br/>ctrl + alt + down: move currently selected item down<br/></div></textXML><creator>maxrohde</creator><created>2007-06-13 18:00:20.838 CEST</created><id>TextItem2</id></item><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    Feel free to play around on this document with them.&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML><div xmlns="http://www.w3.org/1999/xhtml">Feel free to play around on this document with them.<br/></div></textXML><creator>maxrohde</creator><created>2007-06-13 17:59:27.86 CEST</created><id>TextItem3</id></item><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    I recommend that you put all your data under ONE root document. Create 
+    this by Menu File / New Document. Choose a place that you can easily 
+    backup - for instance under your ~/Documents directory.&lt;br&gt;You will not 
+    need the &amp;quot;New Document&amp;quot; function afterwards. Create new documents by 
+    inserting text items to your root document and linking them with ctrl + 
+    alt + left with a newly created document.&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML><div xmlns="http://www.w3.org/1999/xhtml">I recommend that you put all your data under ONE root document. Create this by Menu File / New Document. Choose a place that you can easily backup - for instance under your ~/Documents directory.<br/>You will not need the "New Document" function afterwards. Create new documents by inserting text items to your root document and linking them with ctrl + alt + left with a newly created document.<br/></div></textXML><creator>maxrohde</creator><created>2007-06-13 18:00:20.838 CEST</created><id>TextItem4</id></item><item class="v01.ext.hyperlinkproxy"><hyperlink>http://www.linnk.de/</hyperlink><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    Visit Homepage for updates: http://www.linnk.de/&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML><div xmlns="http://www.w3.org/1999/xhtml">Visit Homepage for updates: http://www.linnk.de/<br/></div></textXML><creator>maxrohde</creator><created>2007-06-13 15:19:38.122 CEST</created><id>TextItem5</id></item><creator>maxrohde</creator><created>2007-06-13 15:19:38.122 CEST</created><id>HyperlinkProxy</id></item><versions><currentVersion>22</currentVersion><change class="v03.newitem"><type>REVERSIBLE</type><item class="v01.titleitem"><title>First_Steps</title><creator>maxrohde</creator><created>2007-06-13 15:14:02.923 CEST</created><id>title</id></item><user>maxrohde</user><date>2007-06-13 15:14:02.923 CEST</date></change><change class="v03.newitem"><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;&lt;body&gt;enter text here ...&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</text><textXML/><creator>maxrohde</creator><created>2007-06-13 15:14:06.634 CEST</created><id>TextItem</id></item><user>maxrohde</user><date>2007-06-13 15:14:06.634 CEST</date></change><change class="v03.modifyitem"><olditem class="v01.titleitem" reference="../../change/item"/><type reference="../../change/type"/><item class="v01.titleitem" reference="../../../item"/><user>maxrohde</user><date>2007-06-13 15:14:06.882 CEST</date></change><change class="v03.newitem"><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;&lt;body&gt;enter text here ...&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</text><textXML/><creator>maxrohde</creator><created>2007-06-13 15:14:27.895 CEST</created><id>TextItem1</id></item><user>maxrohde</user><date>2007-06-13 15:14:27.895 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[2]/item"/><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    Welcome to Linnk.&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML/><creator>maxrohde</creator><created>2007-06-13 15:14:28.35 CEST</created><id>TextItem</id></item><user>maxrohde</user><date>2007-06-13 15:14:28.35 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[4]/item"/><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    enter text here ...&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML/><creator>maxrohde</creator><created>2007-06-13 15:14:29.191 CEST</created><id>TextItem1</id></item><user>maxrohde</user><date>2007-06-13 15:14:29.191 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[5]/item"/><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    Welcome to Linnk!&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML/><creator>maxrohde</creator><created>2007-06-13 15:14:31.275 CEST</created><id>TextItem</id></item><user>maxrohde</user><date>2007-06-13 15:14:31.275 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[6]/item"/><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    This program only makes sense, if you use keystrokes!&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML/><creator>maxrohde</creator><created>2007-06-13 15:15:13.880 CEST</created><id>TextItem1</id></item><user>maxrohde</user><date>2007-06-13 15:15:13.880 CEST</date></change><change class="v03.newitem"><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;&lt;body&gt;enter text here ...&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</text><textXML/><creator>maxrohde</creator><created>2007-06-13 15:15:31.455 CEST</created><id>TextItem2</id></item><user>maxrohde</user><date>2007-06-13 15:15:31.455 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[8]/item"/><type reference="../../change/type"/><item class="v02.textitem" reference="../../../item[3]"/><user>maxrohde</user><date>2007-06-13 15:15:31.586 CEST</date></change><change class="v03.newitem"><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;&lt;body&gt;enter text here ...&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</text><textXML/><creator>maxrohde</creator><created>2007-06-13 15:15:42.976 CEST</created><id>TextItem3</id></item><user>maxrohde</user><date>2007-06-13 15:15:42.976 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[9]/item"/><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    alt + down: insert a new item after select item 
+ctrl + up: select previous item 
+ctrl + down: select following item/ create one if none existent 
+ctrl + alt + right: create a new document and link it with currently selected 
+    item (action also known als Linnk! ;) 
+ctrl + alt + left: creates a list with currently selected item as heading 
+ctrl + right: goes to document which is linked with currently selected item 
+ctrl + left: show previously viewed document 
+ctrl + alt + up: move currently selected item up 
+ctrl + alt + down: move currently selected item down&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML/><creator>maxrohde</creator><created>2007-06-13 15:15:43.118 CEST</created><id>TextItem2</id></item><user>maxrohde</user><date>2007-06-13 15:15:43.118 CEST</date></change><change class="v03.newitem"><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;&lt;body&gt;enter text here ...&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</text><textXML/><creator>maxrohde</creator><created>2007-06-13 15:16:00.38 CEST</created><id>TextItem4</id></item><user>maxrohde</user><date>2007-06-13 15:16:00.38 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[11]/item"/><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    Feel free to play around on this document with them.&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML/><creator>maxrohde</creator><created>2007-06-13 15:16:00.174 CEST</created><id>TextItem3</id></item><user>maxrohde</user><date>2007-06-13 15:16:00.174 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[13]/item"/><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    I recommend that you put all your data under ONE root document. Create 
+    this by Menu File / New Document. Choose a place that you can easily 
+    backup - for instance under your ~/Documents directory.&lt;br&gt;You will not 
+    need the &amp;quot;New Document&amp;quot; function afterwards. Create new documents by 
+    inserting text items to your root document and linking them with ctrl + 
+    alt + left with a newly created document.&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML/><creator>maxrohde</creator><created>2007-06-13 15:19:10.727 CEST</created><id>TextItem4</id></item><user>maxrohde</user><date>2007-06-13 15:19:10.727 CEST</date></change><change class="v03.newitem"><type reference="../../change/type"/><item class="v01.ext.hyperlinkproxy"><hyperlink>http://www.linnk.de/</hyperlink><item class="v02.textitem" reference="../../../../item[7]/item"/><creator>maxrohde</creator><created>2007-06-13 15:19:17.141 CEST</created><id>HyperlinkProxy</id></item><user>maxrohde</user><date>2007-06-13 15:19:17.141 CEST</date></change><change class="v03.modifyitem"><olditem class="v01.ext.hyperlinkproxy" reference="../../change[16]/item"/><type reference="../../change/type"/><item class="v01.ext.hyperlinkproxy" reference="../../../item[7]"/><user>maxrohde</user><date>2007-06-13 15:19:38.122 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[7]/item"/><type reference="../../change/type"/><item class="v02.textitem" reference="../../../item[2]"/><user>maxrohde</user><date>2007-06-13 17:59:25.886 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[12]/item"/><type reference="../../change/type"/><item class="v02.textitem"><text>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    alt + down: insert a new item after select item ctrl + up: select previous 
+    item ctrl + down: select following item/ create one if none existent ctrl 
+    + alt + right: create a new document and link it with currently selected 
+    item (action also known als Linnk! ;) ctrl + alt + left: creates a list 
+    with currently selected item as heading ctrl + right: goes to document 
+    which is linked with currently selected item ctrl + left: show previously 
+    viewed document ctrl + alt + up: move currently selected item up ctrl + 
+    alt + down: move currently selected item down&lt;br&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</text><textXML><html xmlns="http://www.w3.org/1999/xhtml"><head/><body>alt + down: insert a new item after select item ctrl + up: select previous item ctrl + down: select following item/ create one if none existent ctrl + alt + right: create a new document and link it with currently selected item (action also known als Linnk! ;) ctrl + alt + left: creates a list with currently selected item as heading ctrl + right: goes to document which is linked with currently selected item ctrl + left: show previously viewed document ctrl + alt + up: move currently selected item up ctrl + alt + down: move currently selected item down<br/></body></html></textXML><creator>maxrohde</creator><created>2007-06-13 17:59:26.643 CEST</created><id>TextItem2</id></item><user>maxrohde</user><date>2007-06-13 17:59:26.643 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[14]/item"/><type reference="../../change/type"/><item class="v02.textitem" reference="../../../item[5]"/><user>maxrohde</user><date>2007-06-13 17:59:27.86 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[19]/item"/><type reference="../../change/type"/><item class="v02.textitem" reference="../../../item[4]"/><user>maxrohde</user><date>2007-06-13 18:00:20.838 CEST</date></change><change class="v03.modifyitem"><olditem class="v02.textitem" reference="../../change[15]/item"/><type reference="../../change/type"/><item class="v02.textitem" reference="../../../item[6]"/><user>maxrohde</user><date>2007-06-13 18:00:20.838 CEST</date></change></versions><name>First_Steps</name><filename>First_Steps.xml</filename></v01.linnkdocument></linnkcontent>

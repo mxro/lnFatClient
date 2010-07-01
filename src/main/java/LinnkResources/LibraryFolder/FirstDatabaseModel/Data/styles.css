@@ -1,0 +1,363 @@
+/*************************************
+ * TITLE: Sinorca Screen Stylesheet  *
+ * URI  : sinorca/sinorca-screen.css *
+ * MODIF: 2003-Apr-30 19:31 +0800    *
+ *************************************/
+
+
+/* ##### Common Styles ##### */
+
+body { color: black; font-family: verdana, helvetica, arial, sans-serif; margin: 0; padding: 0; }
+
+html > body { font-size: 90%; }
+
+acronym, .titleTip {
+  border-bottom: 1px dotted rgb(153,153,153);
+  cursor: help;
+  margin: 0;
+  padding: 0 0 0.4px 0;
+}
+
+.doNotDisplay {
+  display: none;
+}
+
+.smallCaps {
+  font-size: 110%;
+  font-variant: small-caps;
+}
+
+
+/* ##### Header ##### */
+
+#slogan {
+	margin-left: 15px;
+}
+
+.superHeader {
+  color: white;
+  background-color: rgb(100,135,220);
+  height: 2em;
+}
+
+.superHeader a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 91%;
+  margin: 0;
+  padding: 0 0.5ex 0 0.25ex;
+}
+
+.superHeader a:hover {
+  text-decoration: underline;
+}
+
+.superHeader .left {
+  position: absolute;
+  left: 1.5mm;
+  top: 0.75ex;
+}
+
+.superHeader .right {
+  position: absolute;
+  right: 1.5mm;
+  top: 0.75ex;
+}
+
+.midHeader {
+  color: rgb(39,78,144);
+  background-color: rgb(140,170,230);
+}
+
+.headerTitle {
+  font-size: 337%;
+  font-weight: normal;
+  margin: 0 0 0 4mm;
+  padding: 0.25ex 0;
+}
+
+.subHeader {
+  color: white;
+  background-color: rgb(0,51,153);
+  margin: 0;
+  padding: 1ex 1ex 1ex 1.5mm;
+}
+
+.subHeader a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 0.75ex 0 0.5ex;
+}  
+
+.subHeader a:hover {
+  text-decoration: underline;
+}
+
+.superHeader .highlight, .subHeader .highlight {
+  color: rgb(253,160,91);
+  background-color: transparent;
+}
+
+
+/* ##### Side Bar ##### */
+
+#side-bar { font-size: 90%; padding-top: 10px; background-color: rgb(240,240,240); width: 15em; float: left; clear: left; border-right: 1px solid rgb(153,153,153); }
+
+#side-bar div {
+  border-bottom: 1px solid rgb(153,153,153);
+}
+
+.sideBarTitle {
+  font-weight: bold;
+  margin: 0 0 0.5em 2.5mm;
+  padding: 1em 0 0 0;
+}
+
+#side-bar ul {
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0;
+  padding: 0 0 1.1em 0;
+}
+
+#side-bar li {
+  margin: 0;
+  padding: 0.1ex 0;  /* Circumvents a rendering bug (?) in MSIE 6.0 */
+}
+
+#side-bar ul ul {
+	margin-bottom: -10px;
+}
+
+#side-bar ul ul li a {
+	padding-left: 40px;
+}
+
+#side-bar a, .thisPage {
+  color: rgb(0,102,204);
+  background-color: transparent;
+  text-decoration: none;
+  margin: 0;
+  padding: 0.75em 1ex 0.75em 5mm;
+  display: block;
+}
+
+.thisPage {
+  color: black;
+  background-color: white;
+  padding-left: 4mm;
+  border-top: 1px solid rgb(153,153,153);
+  border-bottom: 1px solid rgb(153,153,153);
+}
+
+#side-bar a:hover {
+  color: white;
+  background-color: rgb(100,135,220);
+  text-decoration: none;
+}
+
+.sideBarText {
+  line-height: 1.5em;
+  margin: 0 0 1em 0;
+  padding: 0 1.5ex 0 2.5mm;
+  display: block;
+}
+
+#side-bar .sideBarText a {
+  text-decoration: underline;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+#side-bar .sideBarText a:hover {
+  color: rgb(0,102,204);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.lighterBackground {
+  color: inherit;
+  background-color: white;
+}
+
+
+/* ##### Main Copy ##### */
+
+#main-copy {
+  color: black;
+  background-color: white;
+  text-align: justify;
+  line-height: 1.6em;
+  margin: 0 0 0 15em;
+  padding: 0.5mm 5mm 5mm 5mm;
+  border-left: 1px solid rgb(153,153,153);
+}
+
+#main-copy p {
+  margin: 1em 1ex 2em 1ex;
+  padding: 0;
+}
+
+#main-copy a {
+  color: rgb(0,102,204);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#main-copy a:hover {
+  text-decoration: none;
+}
+
+#main-copy h1, .blog-entry-title, .movie-page-title, .album-title, .photo-caption, .movie-title {
+  color: white;
+  background-color: rgb(100,135,220);
+  font-size: 100%;
+  font-weight: bold;
+  margin: 2em 0 0 0;
+  padding: 0.5ex 0 0.5ex 1ex;
+}
+
+#main-copy .topOfPage {
+  color: white;
+  background-color: transparent;
+  font-size: 91%;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 2.5ex 1ex 0 0;  /* For MSIE */
+  padding: 0;
+  float: right;
+}
+
+#main-copy > .topOfPage {
+  margin: 2.75ex 1ex 0 0;  /* For fully standards-compliant user agents */
+}
+
+dl {
+  margin: 1em 1ex 2em 1ex;
+  padding: 0;
+}
+
+dt {
+  font-weight: bold;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+
+dd {
+  margin: 0 0 2em 2em;
+  padding: 0;
+}
+
+
+/* ##### Footer ##### */
+
+#footer {
+  color: white;
+  background-color: rgb(100,135,220);
+  font-size: 91%;
+  margin: 0;
+  padding: 1em 2.5mm 2.5ex 2.5mm;
+  padding-bottom: 2.1em;
+  clear: both;
+}
+
+#footer .left {
+  line-height: 1.45em;
+  float: left;
+  clear: left;
+}
+
+#footer .right {
+  text-align: right;
+  line-height: 1.45em;
+}
+
+#footer a {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#footer a:hover {
+  text-decoration: none;
+}
+
+/* RW elements */
+
+.image-left {
+	margin-right: 8px;
+	float: left;
+}
+
+.image-right {
+	margin-left: 8px;
+	float: right;
+}
+
+.blog-image-smiley {
+	margin-bottom: -6px;
+}
+
+.blog-entry-title {
+	margin-bottom: 10px;
+}
+
+.blog-entry-date {
+	padding: 3px 10px 3px 10px;
+	float: right;
+	background-color: white;
+	margin-top: -34px;
+	margin-right: px;
+}
+
+.movie-thumbnail-frame, .thumbnail-wrap {
+	text-align: center;
+	float: left;
+	margin: 5px;
+	padding: 5px;
+}
+
+.movie-thumbnail-frame:hover, .thumbnail-frame:hover, .filesharing-item:hover {
+	background-color: rgb(240,240,240);
+}
+
+.movie-page-description, .album-description, .filesharing-description {
+	padding: 10px;
+}
+
+.photo-background {
+	text-align: center;
+}
+
+.photo-title {
+  font-size: 337%;
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: -30px;
+  padding: 15px;
+}
+
+.filesharing-item {
+	padding: 8px;
+	margin: 5px;
+}
+
+.movie-background {
+	text-align: center;
+}
+
+.movie-frame {
+	margin: 10px;
+}
+
+blockquote {
+	padding: 5px;
+	border: 1px solid rgb(100,135,220);
+}
+
+#main-copy div { margin: 12px 0 0; }
