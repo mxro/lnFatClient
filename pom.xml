@@ -24,7 +24,7 @@
 		<!--
 			exported packages from embedded dependencies
 		-->
-		<module.exportedPackages>
+		<module.exportedPackages>de.linnk.application
 		</module.exportedPackages>
 		<module.embeddedDependencies>wizard;inline=false,inclXStream;inline=false
 		</module.embeddedDependencies>
