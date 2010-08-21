@@ -251,6 +251,8 @@ public abstract class LinnkApplication extends Application {
 			
 		}*/
 		
+		
+		System.out.println(com.thoughtworks.xstream.io.HierarchicalStreamDriver.class.getName());
 		initialiseFolders();
 		
 		

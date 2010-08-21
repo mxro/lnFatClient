@@ -18,6 +18,11 @@ import de.linnk.domain.User;
 import de.linnk.domain.Versions;
 import de.linnk.extpack.v03.ExtPack;
 import de.linnk.fatclient.application.v02.Application;
+import de.mxro.filesystem.v01.IncludedFile;
+import de.mxro.filesystem.v01.IncludedFileSystem;
+import de.mxro.filesystem.v01.LocalFile;
+import de.mxro.filesystem.v01.LocalFolder;
+import de.mxro.filesystem.v01.LocalRootFolder;
 import de.mxro.xstream.definitions.KeyStrokes;
 
 public class LinnkXStream {
@@ -65,7 +70,18 @@ public class LinnkXStream {
 		this.xstream = new XStream(new DomDriver("UTF-8"));
 		this.updater = new Updater();
 		
-		de.mxro.xstream.filesystem.v01.XStreamStreamer.registerAllAnnotations(this.xstream);
+	//	de.mxro.xstream.filesystem.v01.XStreamStreamer.registerAllAnnotations(this.xstream);
+		
+		
+		this.xstream.alias("de.mxro.URI", de.mxro.utils.URIImpl.class);
+		this.xstream.alias("v01.uri", de.mxro.utils.URIImpl.class);
+		this.xstream.alias("v01.localfolder", LocalFolder.class);
+		this.xstream.alias("v01.localfile",  LocalFile.class);
+		this.xstream.alias("v01.localrootfolder",  LocalRootFolder.class);
+		this.xstream.alias("v01.includedfile",  IncludedFile.class);
+		this.xstream.alias("v01.includedfilesystem", IncludedFileSystem.class);
+		
+		
 		Annotations.configureAliases(this.xstream, KeyStrokes.Entry.class);
 		
 		BasisPack.registerAllAnnotations(this.xstream);

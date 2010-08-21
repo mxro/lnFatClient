@@ -6,7 +6,7 @@ import com.thoughtworks.xstream.annotations.Annotations;
 import de.linnk.domain.DependsOnItemProxy;
 import de.linnk.domain.TextItem;
 import de.linnk.domain.TitleItem;
-import de.mxro.xstream.ConvertXML;
+import de.linnk.streaming.ConvertXML;
 
 
 

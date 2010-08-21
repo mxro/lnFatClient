@@ -192,7 +192,7 @@ public class LinnkFatClient {
 	    } catch (final Exception e) {e.printStackTrace(); }
 		final LinnkFatClient linnk = new LinnkFatClient();
 		
-		if (args.length == 0) {
+		if (args == null || args.length == 0) {
 			linnk.open(null);
 		} else {
 			linnk.open(new java.io.File(args[0]));

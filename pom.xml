@@ -14,19 +14,29 @@
  !com.thoughtworks.xstream.mapper,
   !org.openide.util,
  com.sun.org.apache.xml.internal.serialize;resolution:=optional,
+  sun.misc;resolution:=optional,
+ sun.reflect;resolution:=optional,
+  org.jdom;resolution:=optional,
+ org.jdom.input;resolution:=optional,
+ org.joda.time;resolution:=optional,
+ org.joda.time.format;resolution:=optional,
+  net.sf.cglib.proxy;resolution:=optional,
+ nu.xom;resolution:=optional,
+ org.codehaus.jettison.mapped;resolution:=optional,
  org.jdesktop.layout,
  org.dom4j.io,
  de.mxro.image,
  *
 		</module.importedPackages>
-		<module.exportedContents>
-		</module.exportedContents>
-		<!--
-			exported packages from embedded dependencies
-		-->
-		<module.exportedPackages>de.linnk.application
+		<!-- <module.exportedContents>
+		</module.exportedContents>-->
+		<module.exportedPackages>de.linnk.fatclient.application,
+		com.thoughtworks.xstream,
+ com.thoughtworks.xstream.annotations,
+ com.thoughtworks.xstream.converters,
+ com.thoughtworks.xstream.io
 		</module.exportedPackages>
-		<module.embeddedDependencies>wizard;inline=false,inclXStream;inline=false
+		<module.embeddedDependencies>wizard;inline=false;scope=compile|runtime,inclXStream;inline=false;scope=compile|runtime
 		</module.embeddedDependencies>
 		<module.serviceDefinitions>
 		</module.serviceDefinitions>
@@ -182,7 +192,7 @@
 						<Embed-Dependency>${module.embeddedDependencies}
 						</Embed-Dependency>
 						<Embed-Directory>target/dependency</Embed-Directory>
-						<_exportcontents>${module.exportedContents}</_exportcontents>
+						<!-- <_exportcontents>${module.exportedContents}</_exportcontents>-->
 					</instructions>
 				</configuration>
 			</plugin>
@@ -206,6 +216,21 @@
 						</goals>
 						<configuration>
 							<outputDirectory>${basedir}</outputDirectory>
+							<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>false</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
+					</execution>
+					<!-- for eclipse pde -->
+					<execution>
+						<id>copy-dependencies2</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<includeArtifactIds>inclXStream,wizard</includeArtifactIds>
+							<outputDirectory>${basedir}/target/dependency</outputDirectory>
 							<overWriteReleases>false</overWriteReleases>
 							<overWriteSnapshots>false</overWriteSnapshots>
 							<overWriteIfNewer>true</overWriteIfNewer>
