@@ -11,8 +11,8 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 import de.linnk.fatclient.application.LinnkApplication;
 import de.linnk.fatclient.application.LinnkFatClient;
+import de.linnk.streaming.KeyStrokes;
 import de.mxro.utils.URIImpl;
-import de.mxro.xstream.definitions.KeyStrokes;
 
 
 @XStreamAlias("v02.settings")

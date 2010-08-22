@@ -17,19 +17,19 @@ public class LinnkProxyStyle extends ProxyItemStyle<LinnkProxy> {
 	@Override
 	public void writeItemXML(MyContentHandler hd, Folder files, String path)
 			throws SAXException {
-		de.mxro.xstream.XMLUtils.startDivElement(hd, "linnkproxy");
+		de.linnk.streaming.XMLUtils.startDivElement(hd, "linnkproxy");
 		
 		hd.startElement("", "", "a", null);
 		final AttributesImpl atts = new AttributesImpl();
 		atts.addAttribute("", "", "name", "CDATA", "href");
 		hd.startElement("", "", "xsl:attribute", atts);
-		de.mxro.xstream.XMLUtils.writeValueOfElement(hd, "link");
+		de.linnk.streaming.XMLUtils.writeValueOfElement(hd, "link");
 		hd.endElement("", "", "xsl:attribute");
 			
-		de.mxro.xstream.XMLUtils.writeApplyTemplatesElement(hd, "item");
+		de.linnk.streaming.XMLUtils.writeApplyTemplatesElement(hd, "item");
 		//de.mxro.Utils.writeValueOfElement(hd, "title");
 		hd.endElement("", "", "a");
-		de.mxro.xstream.XMLUtils.endDivElement(hd);
+		de.linnk.streaming.XMLUtils.endDivElement(hd);
 	
 	}
 

@@ -72,9 +72,9 @@
 			<location>/Users/mx/.m2/repository/com/hp/hpl/jena/jena/2.6.2/jena-2.6.2.jar</location>
 		</link>
 		<link>
-			<name>jenabean-1.0.3.jar</name>
+			<name>jenabean-1.0.6.jar</name>
 			<type>1</type>
-			<location>/Users/mx/.m2/repository/thewebsemantic/jenabean/1.0.3/jenabean-1.0.3.jar</location>
+			<location>/Users/mx/.m2/repository/thewebsemantic/jenabean/1.0.6/jenabean-1.0.6.jar</location>
 		</link>
 		<link>
 			<name>jmyspell-1.0.jar</name>

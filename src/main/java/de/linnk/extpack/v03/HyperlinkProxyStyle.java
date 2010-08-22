@@ -46,7 +46,7 @@ public class HyperlinkProxyStyle extends ProxyItemStyle<HyperlinkProxy> {
 //			UserError.singelton.log(e);
 //		}
 		
-		de.mxro.xstream.XMLUtils.startDivElement(hd, "hyperlinkproxy");
+		de.linnk.streaming.XMLUtils.startDivElement(hd, "hyperlinkproxy");
 		
 		hd.startElement("", "", "a", null);
 		final AttributesImpl atts = new AttributesImpl();
@@ -54,18 +54,18 @@ public class HyperlinkProxyStyle extends ProxyItemStyle<HyperlinkProxy> {
 		hd.startElement("", "", "xsl:attribute", atts);
 		
 		if (hyperlink == null) {
-			de.mxro.xstream.XMLUtils.writeValueOfElement(hd, "hyperlink");
+			de.linnk.streaming.XMLUtils.writeValueOfElement(hd, "hyperlink");
 		} else {
-			de.mxro.xstream.XMLUtils.writeCharacters(hd, hyperlink);
+			de.linnk.streaming.XMLUtils.writeCharacters(hd, hyperlink);
 		}
 		hd.endElement("", "", "xsl:attribute");
 		
 		
 		
-		de.mxro.xstream.XMLUtils.writeApplyTemplatesElement(hd, "item");
+		de.linnk.streaming.XMLUtils.writeApplyTemplatesElement(hd, "item");
 		//de.mxro.Utils.writeValueOfElement(hd, "title");
 		hd.endElement("", "", "a");
-		de.mxro.xstream.XMLUtils.endDivElement(hd);
+		de.linnk.streaming.XMLUtils.endDivElement(hd);
 		
 	}
 

@@ -11,7 +11,6 @@ import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
-import de.mxro.xstream.XMLUtils;
 
 public class ConvertXML implements Converter {
 	
@@ -35,7 +34,7 @@ public class ConvertXML implements Converter {
 		final ByteArrayInputStream is = new ByteArrayInputStream(text.getBytes());
 		final org.w3c.dom.Document doc = tidy.parseDOM(is, null);
 		
-		de.mxro.xstream.XMLUtils.insertNode(arg1, doc, true);
+		de.linnk.streaming.XMLUtils.insertNode(arg1, doc, true);
 
 	}
 

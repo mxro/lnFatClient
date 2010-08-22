@@ -20,7 +20,7 @@ public class JPEGPictureItemStyle extends ItemStyle<JPEGPictureItem> {
 	public void writeItemXML(MyContentHandler hd, Folder files, String path)
 			throws SAXException {
 		
-		de.mxro.xstream.XMLUtils.startDivElement(hd, "jpegpictureitem");
+		de.linnk.streaming.XMLUtils.startDivElement(hd, "jpegpictureitem");
 		
 		hd.startElement("", "", "img", null);
 		
@@ -58,7 +58,7 @@ public class JPEGPictureItemStyle extends ItemStyle<JPEGPictureItem> {
 		
 		hd.endElement("", "", "img");
 		
-		de.mxro.xstream.XMLUtils.endDivElement(hd);
+		de.linnk.streaming.XMLUtils.endDivElement(hd);
 
 	}
 

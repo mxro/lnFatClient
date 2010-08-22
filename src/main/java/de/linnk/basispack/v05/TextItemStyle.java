@@ -15,11 +15,11 @@ public class TextItemStyle extends ItemStyle<TextItem> {
 
 	@Override
 	public void writeItemXML(MyContentHandler hd, Folder files, String path) throws SAXException {
-		de.mxro.xstream.XMLUtils.startDivElement(hd, "textitem");
+		de.linnk.streaming.XMLUtils.startDivElement(hd, "textitem");
 		
-		de.mxro.xstream.XMLUtils.writeCopyOfElement(hd, "textXML/*|textXML/text()"); // otherwise firefox does not show items without any elements
+		de.linnk.streaming.XMLUtils.writeCopyOfElement(hd, "textXML/*|textXML/text()"); // otherwise firefox does not show items without any elements
 		
-		de.mxro.xstream.XMLUtils.endDivElement(hd);
+		de.linnk.streaming.XMLUtils.endDivElement(hd);
 		
 	}
 

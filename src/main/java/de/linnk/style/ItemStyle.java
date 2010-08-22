@@ -20,11 +20,11 @@ public abstract class ItemStyle<I extends Item> extends XSLBuilder {
 	@Override
 	public  boolean writeXSL(MyContentHandler hd, Folder files, String path)
 			throws SAXException {
-		de.mxro.xstream.XMLUtils.startXSLTemplateElement(hd, path+"[@class='"+LinnkXStream.singelton.resolveAlias(this.item.getClass())+"' "+
+		de.linnk.streaming.XMLUtils.startXSLTemplateElement(hd, path+"[@class='"+LinnkXStream.singelton.resolveAlias(this.item.getClass())+"' "+
 				"and id='"+this.item.getId()+"']");
 		
 		this.writeItemXML(hd, files, "item");
-		de.mxro.xstream.XMLUtils.endXSLTemplateElement(hd);
+		de.linnk.streaming.XMLUtils.endXSLTemplateElement(hd);
 		return true;
 	}
 	

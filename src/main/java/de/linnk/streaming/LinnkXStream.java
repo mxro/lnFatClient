@@ -23,7 +23,6 @@ import de.mxro.filesystem.v01.IncludedFileSystem;
 import de.mxro.filesystem.v01.LocalFile;
 import de.mxro.filesystem.v01.LocalFolder;
 import de.mxro.filesystem.v01.LocalRootFolder;
-import de.mxro.xstream.definitions.KeyStrokes;
 
 public class LinnkXStream {
     

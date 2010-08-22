@@ -18,7 +18,7 @@ import de.linnk.domain.RemoveItem;
 import de.linnk.domain.SimpleLink;
 import de.linnk.domain.User;
 import de.linnk.domain.Versions;
-import de.mxro.xstream.NoReference;
+import de.linnk.streaming.NoReference;
 
 
 

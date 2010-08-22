@@ -24,6 +24,7 @@ import de.linnk.domain.TitleItem;
 import de.linnk.streaming.DocumentStreamer;
 import de.linnk.streaming.ItemsXSLBuilder;
 import de.linnk.streaming.LinnkXStream;
+import de.linnk.streaming.XMLUtils;
 import de.mxro.filesystem.File;
 import de.mxro.filesystem.FileSystemObject;
 import de.mxro.filesystem.Folder;
@@ -33,7 +34,6 @@ import de.mxro.utils.log.UserError;
 import de.mxro.xml.CopyContentHandler;
 import de.mxro.xml.MyContentHandler;
 import de.mxro.xml.style.XSLBuilder;
-import de.mxro.xstream.XMLUtils;
 
 
 public class RWView extends CompositeView {
