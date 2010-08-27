@@ -1,6 +1,6 @@
 package de.linnk.tests;
 
-import org.junit.Test;
+
 
 import de.mxro.string.filter.Filter;
 
@@ -11,7 +11,7 @@ public class Items {
 		"<xsl:template match='/'><xsl:value-of select='*' /></xsl:template>\n",*/
 		Filter.regExReplace("\\<.*?>|\n|^ *", "", Filter.identity);
 	
-	@Test
+	
 	public void textItemTextOnly() {
 		
 		String html2 = "<body>\n\nhere is text<b/>und here too</body>";

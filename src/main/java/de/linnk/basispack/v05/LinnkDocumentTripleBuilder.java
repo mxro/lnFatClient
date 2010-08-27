@@ -18,7 +18,7 @@ import de.linnk.domain.ProxyItem;
 import de.linnk.domain.TextItem;
 import de.linnk.extpack.v03.HyperlinkProxy;
 import de.linnk.fatclient.application.LinnkFatClient;
-import de.linnk.semantic.BasicSemanticTests.Linnk;
+import de.linnk.tests.BasicSemanticTests.Linnk;
 import de.mxro.filesystem.Folder;
 import de.mxro.utils.URI;
 import de.mxro.utils.URIImpl;

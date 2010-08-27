@@ -26,6 +26,8 @@
  org.jdesktop.layout,
  org.dom4j.io,
  de.mxro.image,
+ de.linnk.nx,
+ de.linnk.nx.core,
  *
 		</module.importedPackages>
 		<!-- <module.exportedContents>

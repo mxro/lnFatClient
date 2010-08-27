@@ -1,6 +1,6 @@
-package de.linnk.semantic;
+package de.linnk.tests;
 
-import org.junit.Test;
+
 
 import thewebsemantic.Namespace;
 import thewebsemantic.Thing;
@@ -12,10 +12,12 @@ import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.RDFWriter;
 
+import de.linnk.semantic.BasicOntology;
+
 
 
 public class BasicSemanticTests {
-	@Test
+	
 	public void buildSimpleDocument() {
 		String ns = "http://www.linnk.de/basic.rdf#";
 		OntModel m = ModelFactory.createOntologyModel( 
@@ -48,7 +50,7 @@ public class BasicSemanticTests {
 
 	}
 	
-	@Test
+	
 	public void buildSimpleJenaBeanModel() {
 		OntModel m = ModelFactory.createOntologyModel( 
 				// create without inferecing, OWL Full - With inferecing would be OWL_MEM_MICRO_RULE_INF	
