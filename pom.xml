@@ -158,6 +158,14 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>de.linnk.nx.swing</groupId>
+			<artifactId>nxSwing</artifactId>
+			<version>[0.0.1,)</version>
+			<optional>false</optional>
+		</dependency>
+		
+
 	</dependencies>
 
 	<modelVersion>4.0.0</modelVersion>
@@ -169,6 +177,20 @@
 
 	<build>
 		<plugins>
+		<!-- FOR DECLARATIVE SERVICES -->
+		    <plugin>
+<groupId>org.apache.felix</groupId>
+<artifactId>maven-scr-plugin</artifactId>
+<executions>
+<execution>
+<id>generate-scr-scrdescriptor</id>
+<goals>
+<goal>scr</goal>
+</goals>
+</execution>
+</executions>
+</plugin>
+		
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
@@ -276,6 +298,12 @@
 							<tasks>
 								<delete file="${basedir}/META-INF/MANIFEST.MF" />
 								<copy file="target/classes/META-INF/MANIFEST.MF" tofile="${basedir}/META-INF/MANIFEST.MF" />
+							</tasks>
+							<tasks>
+								<delete file="${basedir}/OSGI-INF" />
+								<copy todir="${basedir}/OSGI-INF" >
+								  <fileset dir="target/scr-plugin-generated/OSGI-INF" includes="**" />
+								</copy>
 							</tasks>
 						</configuration>
 					</execution>

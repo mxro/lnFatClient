@@ -15,17 +15,15 @@ Embed-Directory: target/dependency
 Ignore-Package: com.thoughtworks.xstream.io,com.thoughtworks.xstream.c
  onverters,com.thoughtworks.xstream.annotations,org.openide.util,com.t
  houghtworks.xstream
-Bundle-ClassPath: .,target/dependency/wizard-1.0.0.jar,target/dependen
- cy/inclXStream-0.0.4-SNAPSHOT.jar
 Built-By: mx
 Tool: Bnd-0.0.357
 Bundle-Name: lnFatClient
 Created-By: Apache Maven Bundle Plugin
 Build-Jdk: 1.6.0_20
 Bundle-Version: 0.0.1.SNAPSHOT
-Bnd-LastModified: 1282875073251
+Bnd-LastModified: 1282886940103
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: lnFatClient
+Bundle-SymbolicName: lnFatClient;singleton:=true
 Import-Package: com.hp.hpl.jena.ontology,
  com.hp.hpl.jena.rdf.model,
  com.hp.hpl.jena.shared,
@@ -36,6 +34,7 @@ Import-Package: com.hp.hpl.jena.ontology,
  de.linnk.netbeansguis,
  de.linnk.nx,
  de.linnk.nx.core,
+ de.linnk.nx.swing,
  de.mxro.filesystem,
  de.mxro.filesystem.ext,
  de.mxro.filesystem.v01,
@@ -105,4 +104,31 @@ Import-Package: com.hp.hpl.jena.ontology,
  thewebsemantic.vocabulary
 Embed-Dependency: wizard;inline=false;scope=compile|runtime,inclXStrea
  m;inline=false;scope=compile|runtime
-
+Bundle-ClassPath: .,
+ arq-2.8.2.jar,
+ iri-0.8.jar,
+ jena-2.6.2.jar,
+ icu4j-3.4.4.jar,
+ filters-2.0.235.jar,
+ javaws-1.0.jar,
+ xstream-1.3.jar,
+ inclXStream-0.0.4-SNAPSHOT.jar,
+ dom4j-1.6.1.jar,
+ jaxen-1.0-FCS.jar,
+ log4j-1.2.13.jar,
+ relaxngDatatype-20050913.jar,
+ xsdlib-20050913.jar,
+ lucene-core-2.3.1.jar,
+ wstx-asl-3.2.9.jar,
+ jmyspell-1.0.jar,
+ beansbinding-1.2.1.jar,
+ wizard-1.0.0.jar,
+ swing-layout-1.0.3.jar,
+ swing-worker-1.1.jar,
+ jtidy-8.0.jar,
+ pull-parser-2.1.10.jar,
+ stax-api-1.0.1.jar,
+ jenabean-1.0.6.jar,
+ xercesImpl-2.7.1.jar,
+ xml-apis-1.0.b2.jar,
+ xpp3_min-1.1.4c.jar
