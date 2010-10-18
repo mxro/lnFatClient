@@ -4,12 +4,14 @@ import java.awt.Container;
 
 import javax.swing.BoxLayout;
 import javax.swing.Icon;
+import javax.swing.JComponent;
 
 import de.linnk.basispack.v05.NodeDocument;
 import de.linnk.domain.Item;
 import de.linnk.domain.ItemChange;
 import de.linnk.fatclient.application.LinnkFatClient;
 import de.linnk.fatclient.document.itemspanel.ItemsPanel;
+import de.linnk.nx.swing.SwingRenderer;
 import de.mxro.swing.JMyPanel;
 import de.mxro.utils.log.UserError;
 
@@ -18,9 +20,11 @@ import de.mxro.utils.log.UserError;
  * content of an item, has to be extended to display specific items
  * 
  * @author maxrohde
+ * 
+ * implements SwingRenderer<Item>
  *
  */
-public abstract class ItemPanel<I extends Item> extends JMyPanel {
+public abstract class ItemPanel<I extends Item> extends JMyPanel  {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -43,6 +47,8 @@ public abstract class ItemPanel<I extends Item> extends JMyPanel {
 	
 	
 	protected final java.awt.event.FocusAdapter focusListener;
+	
+	
 	
 	protected java.awt.event.FocusAdapter getFocusListener() {
 		return this.focusListener;

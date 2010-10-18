@@ -2,7 +2,6 @@ package de.linnk.tests;
 
 
 
-import thewebsemantic.Namespace;
 import thewebsemantic.Thing;
 import thewebsemantic.vocabulary.DCTerms;
 import thewebsemantic.vocabulary.Sioc;
@@ -38,19 +37,6 @@ public class BasicSemanticTests {
 	
 	
 	
-	@Namespace("http://www.linnk.de/basic.rdf#")
-	public interface Linnk extends Sioc {
-		public interface Document extends Linnk {};
-		
-		//Linnk has_creator(Object t);
-      //  Collection<Thing> has_creator();
-        
-       // Linnk content(Object t);
-       // Collection<Thing> content();
-
-	}
-	
-	
 	public void buildSimpleJenaBeanModel() {
 		OntModel m = ModelFactory.createOntologyModel( 
 				// create without inferecing, OWL Full - With inferecing would be OWL_MEM_MICRO_RULE_INF	
@@ -63,7 +49,7 @@ public class BasicSemanticTests {
 		 as(DCTerms.class).
 		title("Document1").
 		created("2009-09-07T09:33:30Z").
-		isa(Linnk.Document.class).
+		isa(BasicOntology.Linnk.Document.class).
 		has_creator(
 		thing.at("http://www.linnk.de/mxro.rdf").isa(Sioc.User.class).
 		seeAlso( thing.at("http://www.mxro.de/me.rdf"))).

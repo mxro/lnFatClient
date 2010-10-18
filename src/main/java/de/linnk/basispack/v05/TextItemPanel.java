@@ -2,50 +2,36 @@ package de.linnk.basispack.v05;
 
 import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.io.IOException;
 
-import javax.swing.AbstractAction;
 import javax.swing.Icon;
-import javax.swing.JEditorPane;
-import javax.swing.KeyStroke;
+import javax.swing.JComponent;
 import javax.swing.SwingUtilities;
-import javax.swing.event.CaretEvent;
-import javax.swing.event.CaretListener;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.Element;
-import javax.swing.text.View;
-import javax.swing.text.ViewFactory;
-import javax.swing.text.html.HTML;
-import javax.swing.text.html.HTMLDocument;
-import javax.swing.text.html.HTMLEditorKit;
-import javax.swing.text.html.StyleSheet;
 
 import org.dts.spell.swing.JTextComponentSpellChecker;
 
-import de.linnk.Linnk;
 import de.linnk.domain.Item;
 import de.linnk.domain.TextItem;
-import de.linnk.fatclient.application.LinnkApplication;
 import de.linnk.fatclient.application.LinnkFatClient;
 import de.linnk.fatclient.document.ItemPanel;
 import de.linnk.fatclient.icons.Icons;
 import de.linnk.gwt.LinnkGWTUtils;
+import de.linnk.nx.swing.SwingRenderer;
 import de.linnk.streaming.DocumentLoader;
-import de.mxro.shef.BRView;
 import de.mxro.shef.MxroEditorPane;
 import de.mxro.swing.JMyPanel;
-import de.mxro.transferable.ClipboardFacade;
-import de.mxro.transferable.CutAndPaste;
 
-
-public class TextItemPanel extends ItemPanel<TextItem> {
+/**
+*
+* @author mx
+*
+*
+* @scr.component
+* @scr.service interface="de.linnk.nx.swing.SwingRenderer"
+*
+*/
+public class TextItemPanel extends ItemPanel<TextItem> implements de.linnk.nx.swing.SwingRenderer<TextItem>{
 
 	public static final long serialVersionUID = 1L;
 	
@@ -56,6 +42,13 @@ public class TextItemPanel extends ItemPanel<TextItem> {
 	boolean hyperlinkEntered=false;
 
 	protected EditorPane jTextField = null;
+	
+	@Override
+	public JComponent render(TextItem o) {
+		TextItemPanel tp =  new TextItemPanel();
+		tp.setItem(o);
+		return tp;
+	}
 	
 	public class EditorPane extends MxroEditorPane {
 

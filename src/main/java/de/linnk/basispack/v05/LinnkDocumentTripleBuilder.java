@@ -18,7 +18,8 @@ import de.linnk.domain.ProxyItem;
 import de.linnk.domain.TextItem;
 import de.linnk.extpack.v03.HyperlinkProxy;
 import de.linnk.fatclient.application.LinnkFatClient;
-import de.linnk.tests.BasicSemanticTests.Linnk;
+import de.linnk.semantic.BasicOntology;
+import de.linnk.semantic.BasicOntology.Linnk;
 import de.mxro.filesystem.Folder;
 import de.mxro.utils.URI;
 import de.mxro.utils.URIImpl;
@@ -37,7 +38,7 @@ public class LinnkDocumentTripleBuilder extends DocumentTripleBuilder<NodeDocume
 		return lV;
 	}
 	
-	private <I extends ProxyItem> boolean  writeLinksToOtherDocuments(Class<I> clazz, OntModel toModel, Linnk.Document parent, Folder files) {
+	private <I extends ProxyItem> boolean  writeLinksToOtherDocuments(Class<I> clazz, OntModel toModel, BasicOntology.Linnk.Document parent, Folder files) {
 		List<Item> items = document.getItems();
 		
 		for (Item i : items) {
@@ -54,7 +55,7 @@ public class LinnkDocumentTripleBuilder extends DocumentTripleBuilder<NodeDocume
 					// for links to linnk documents
 					if (lp instanceof LinnkProxy) {
 						URI rdfLink = uriLink.changeExtension(de.linnk.domain.LinnkConstants.rdfExtension);
-						parent.links_to(new Thing(toModel).at(rdfLink.toString()).isa(Linnk.Document.class).label(label));
+						parent.links_to(new Thing(toModel).at(rdfLink.toString()).isa(BasicOntology.Linnk.Document.class).label(label));
 					} 
 					// for other kinds of links ...
 					else {
@@ -96,13 +97,13 @@ public class LinnkDocumentTripleBuilder extends DocumentTripleBuilder<NodeDocume
 		// ---
 		Thing thing = new Thing(toModel);
 		URI thisDocURI = URIImpl.create(document.getUniqueURI()).changeExtension(de.linnk.domain.LinnkConstants.rdfExtension);
-		Linnk.Document doc = thing.at(thisDocURI.toString()).
+		BasicOntology.Linnk.Document doc = thing.at(thisDocURI.toString()).
 		   as(DCTerms.class).title(document.getName()).created(document.getCreated()).
 		   as(Sioc.class).has_creator(thing.at(creator.toString()).isa(Sioc.User.class)).
 		   label(document.getName()).
 		   seeAlso(document.getUniqueURI()).
 		   //.content("content").
-		   isa(Linnk.Document.class);
+		   isa(BasicOntology.Linnk.Document.class);
 		
 		// --
 		// owner document link
@@ -110,7 +111,7 @@ public class LinnkDocumentTripleBuilder extends DocumentTripleBuilder<NodeDocume
 		if (document.getOwnerLink() != null) {
 			URI toOwnerXML = document.getFolder().getURI().resolve(document.getOwnerLink());
 			URI toOwnerRDF = toOwnerXML.changeExtension(".rdf");
-			doc.has_container(new Thing(toModel).at(toOwnerRDF.toString()).isa(Linnk.Document.class).label("Parent"));
+			doc.has_container(new Thing(toModel).at(toOwnerRDF.toString()).isa(BasicOntology.Linnk.Document.class).label("Parent"));
 		}
 		
 		return this.writeLinksToOtherDocuments(LinnkProxy.class, toModel, doc, files) &
