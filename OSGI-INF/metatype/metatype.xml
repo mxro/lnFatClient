@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/metatype">
+    <OCD id="de.linnk.basispack.v05.TextItemPanel" name="%de.linnk.basispack.v05.TextItemPanel.name" description="%de.linnk.basispack.v05.TextItemPanel.description"/>
+    <Designate pid="de.linnk.basispack.v05.TextItemPanel">
+        <Object ocdref="de.linnk.basispack.v05.TextItemPanel"/>
+    </Designate>
+</metatype:MetaData>

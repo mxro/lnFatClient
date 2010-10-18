@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component enabled="true" name="de.linnk.basispack.v05.TextItemPanel">
+        <implementation class="de.linnk.basispack.v05.TextItemPanel"/>
+        <service servicefactory="false">
+            <provide interface="de.linnk.nx.swing.SwingRenderer"/>
+            <provide interface="javax.accessibility.Accessible"/>
+            <provide interface="java.io.Serializable"/>
+            <provide interface="javax.swing.TransferHandler$HasGetTransferHandler"/>
+            <provide interface="java.awt.image.ImageObserver"/>
+            <provide interface="java.awt.MenuContainer"/>
+        </service>
+        <property name="service.pid" value="de.linnk.basispack.v05.TextItemPanel"/>
+    </scr:component>
+</components>
