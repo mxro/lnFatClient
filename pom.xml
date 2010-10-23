@@ -28,6 +28,7 @@
  de.mxro.image,
  de.linnk.nx,
  de.linnk.nx.core,
+ de.linnk.domain*,
  *
 		</module.importedPackages>
 		<!-- <module.exportedContents>

@@ -28,7 +28,7 @@ import de.mxro.swing.JMyPanel;
 *
 *
 * @scr.component
-* @scr.service interface="de.linnk.nx.swing.SwingRenderer"
+*  ]@]scr.service interface="de.linnk.nx.swing.SwingRenderer"
 *
 */
 public class TextItemPanel extends ItemPanel<TextItem> implements de.linnk.nx.swing.SwingRenderer<TextItem>{
