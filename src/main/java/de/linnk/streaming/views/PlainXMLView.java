@@ -15,6 +15,8 @@ import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import mx.gwtutils.MxroGWTUtils;
+
 import org.w3c.dom.DOMException;
 
 import de.linnk.domain.Document;
@@ -27,7 +29,6 @@ import de.mxro.filesystem.File;
 import de.mxro.filesystem.Folder;
 import de.mxro.string.filter.Filter;
 import de.mxro.utils.URI;
-import de.mxro.utils.Utils;
 import de.mxro.utils.log.UserError;
 
 public class PlainXMLView implements View {
@@ -127,7 +128,7 @@ public class PlainXMLView implements View {
 	
 	public LoadOnDemandDocument writeView(Document documentToSave, Folder destinationFolder) {
 			
-			File newFile = destinationFolder.forceFile(Utils.removeExtension(documentToSave.getFilename())+de.linnk.domain.LinnkConstants.xmlExtension); 
+			File newFile = destinationFolder.forceFile(MxroGWTUtils.removeExtension(documentToSave.getFilename())+de.linnk.domain.LinnkConstants.xmlExtension); 
 			UserError.singelton.log(this, "XML File to be saved under URI: "+newFile.getURI(), UserError.Priority.INFORMATION);
 			
 			URI xslURI =  newFile.getURI().changeExtension(de.linnk.domain.LinnkConstants.xslExtension);

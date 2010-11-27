@@ -23,7 +23,7 @@ public class LinnkAlias implements Validierbar {
 	protected final String destination;
 	
 	public boolean isValid() {
-		return de.mxro.utils.Utils.getExtension(this.destination).equals("xml");
+		return mx.gwtutils.MxroGWTUtils.getExtension(this.destination).equals("xml");
 	}
 
 	public LinnkAlias(final String desitnation) {
@@ -59,7 +59,7 @@ public class LinnkAlias implements Validierbar {
 			de.mxro.utils.log.UserError.singelton.showError("LinnkAlias.getDocument: Alias could not be resolved. currentDir does not exist!");
 			return null;
 		}
-		final String dest = de.mxro.utils.Utils.removeExtension(this.destination) + ".xml";
+		final String dest = mx.gwtutils.MxroGWTUtils.removeExtension(this.destination) + ".xml";
 		final java.io.File documentFile = new java.io.File(currentDir.getAbsolutePath()+"/"+dest);
 		if (!documentFile.isFile()) {
 			de.mxro.utils.log.UserError.singelton.showError("LinnkAlias.getDocument: Destination does not exist!");

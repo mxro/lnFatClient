@@ -1,11 +1,11 @@
 package de.linnk.streaming.views;
 
+import mx.gwtutils.MxroGWTUtils;
 import de.linnk.domain.Document;
 import de.linnk.fatclient.application.LinnkFatClient;
 import de.linnk.streaming.activities.WriteLinnkAlias;
 import de.mxro.filesystem.File;
 import de.mxro.filesystem.Folder;
-import de.mxro.utils.Utils;
 
 /**
  * Writes a .linnk file in the destination folder
@@ -18,7 +18,7 @@ public class LinnkAliasView extends CompositeView {
 	@Override
 	public boolean stepWriteView(Document toSave, Folder destinationFolder,
 			LoadOnDemandDocument newDocumentInDestnationFolder) {
-		final File linnkFile = destinationFolder.forceFile(Utils.removeExtension(toSave.getFilename())+de.linnk.domain.LinnkConstants.linnkExtension);
+		final File linnkFile = destinationFolder.forceFile(MxroGWTUtils.removeExtension(toSave.getFilename())+de.linnk.domain.LinnkConstants.linnkExtension);
 		WriteLinnkAlias writeLinnkAlias = new WriteLinnkAlias(linnkFile, newDocumentInDestnationFolder.getFile().getName());
 		
 		if (useBackground) {

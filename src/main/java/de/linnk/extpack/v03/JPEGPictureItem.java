@@ -3,6 +3,8 @@ package de.linnk.extpack.v03;
 import java.awt.image.BufferedImage;
 import java.net.URISyntaxException;
 
+import mx.gwtutils.MxroGWTUtils;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 import de.linnk.basispack.v05.NodeDocument;
@@ -17,7 +19,6 @@ import de.mxro.filesystem.v01.IncludedRootFolder;
 import de.mxro.swing.Image;
 import de.mxro.utils.URI;
 import de.mxro.utils.domain.Styled;
-import de.mxro.utils.gwt.MxroGWTUtils;
 import de.mxro.utils.log.UserError;
 
 @XStreamAlias("v01.ext.jpegpictureitem")

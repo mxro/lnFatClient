@@ -42,7 +42,7 @@ public class DocumentLoader {
 		UserError.singelton.log(this, "loadFromFile: mxro File: '"+file.getURI().toString()+"'\n" +
 				" in folder "+file.getOwner().getURI().toString()+"'", UserError.Priority.INFORMATION);
 		
-		if (de.mxro.utils.Utils.getExtension(file.getName()).equals( "xml")) {
+		if (mx.gwtutils.MxroGWTUtils.getExtension(file.getName()).equals( "xml")) {
 			doc = (NodeDocument) DocumentStreamer.singelton.readFromStream(file.getInputStream() );
 			if (doc == null) {
 				UserError.singelton.log(this, "loadFromFile: Invalid Format for file: "+file.getURI(), UserError.Priority.HIGH);
@@ -85,7 +85,7 @@ public class DocumentLoader {
 			}
 			return doc;
 		} else
-		if (de.mxro.utils.Utils.getExtension(file.getName()).equals( "linnk")) {
+		if (mx.gwtutils.MxroGWTUtils.getExtension(file.getName()).equals( "linnk")) {
 			de.mxro.utils.log.UserError.singelton.log("DocumentLoader.loadFromFile: Tries to open alias: "+file.getName());
 			final LinnkAlias la = LinnkAlias.fromStream( file.getInputStream() );
 			//System.out.println(file.getOwner().getURI());

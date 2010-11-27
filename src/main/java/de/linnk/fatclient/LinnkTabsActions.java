@@ -271,7 +271,7 @@ public class LinnkTabsActions extends Actions {
 			
 			final String selectedFileAbsolutePath = fc.getSelectedFile().getAbsolutePath();
 			
-			final String selectedFileWithoutExtension = de.mxro.utils.Utils.removeExtension(selectedFileAbsolutePath);
+			final String selectedFileWithoutExtension = mx.gwtutils.MxroGWTUtils.removeExtension(selectedFileAbsolutePath);
 			
 			final String selectedFileWithDocumentExtension = selectedFileWithoutExtension+
 			DocumentBuilder.documentExtension ;
@@ -467,7 +467,7 @@ public class LinnkTabsActions extends Actions {
 				// de.mxro.UserError.singelton.log("openInBrowser");
 				de.mxro.filesystem.File xmlFile = holder.getDocumentPanel().getDocument().getFile();
 				
-				final String htmlFileName = de.mxro.utils.Utils.removeExtension(xmlFile.getName())+LinnkConstants.htmlExtension;
+				final String htmlFileName = mx.gwtutils.MxroGWTUtils.removeExtension(xmlFile.getName())+LinnkConstants.htmlExtension;
 				de.mxro.filesystem.File htmlFile = xmlFile.getOwner().getFile(URIImpl.create(htmlFileName));
 				if (htmlFile == null) {
 					UserError.singelton.log(this, "html file does not exist: '"+htmlFileName+"'\n " +

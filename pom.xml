@@ -26,9 +26,9 @@
  org.jdesktop.layout,
  org.dom4j.io,
  de.mxro.image,
- de.linnk.nx,
- de.linnk.nx.core,
+ nx.core,
  de.linnk.domain*,
+ mx.gwtutils,
  *
 		</module.importedPackages>
 		<!-- <module.exportedContents>

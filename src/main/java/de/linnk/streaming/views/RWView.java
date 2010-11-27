@@ -8,6 +8,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 import java.util.HashMap;
 
+import mx.gwtutils.MxroGWTUtils;
+
 import org.w3c.tidy.DOMElementImpl;
 import org.w3c.tidy.Tidy;
 import org.xml.sax.InputSource;
@@ -209,7 +211,7 @@ public class RWView extends CompositeView {
 							if (!this.includeEditLink) {
 								value = value + "</ul>";
 							} else {
-								value = value + "<li><a href='"+Utils.removeExtension(root.getFilename())+de.linnk.domain.LinnkConstants.linnkExtension+
+								value = value + "<li><a href='"+MxroGWTUtils.removeExtension(root.getFilename())+de.linnk.domain.LinnkConstants.linnkExtension+
 									"' type='application/linnk' >Edit Document</a></li></ul>";
 							}
 					}
@@ -462,7 +464,7 @@ public class RWView extends CompositeView {
 			LoadOnDemandDocument newDocumentInDestnationFolder) {
 		
 	
-		final File xslFile = destinationFolder.forceFile(Utils.removeExtension(toSave.getFilename())+de.linnk.domain.LinnkConstants.xslExtension);
+		final File xslFile = destinationFolder.forceFile(MxroGWTUtils.removeExtension(toSave.getFilename())+de.linnk.domain.LinnkConstants.xslExtension);
 			
 		return this.writeXSL(toSave, xslFile, destinationFolder) != null;
 	}

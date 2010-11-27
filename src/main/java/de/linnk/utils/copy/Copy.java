@@ -176,7 +176,7 @@ public abstract class Copy {
 			newDocuments.add(new ChangedLink(oldDocURI.toString(), newDocURI.toString()));
 			
 			if (doc.getOwnerLink() != null && !doc.getFile().getURI().getPath().equals(newRoot.getFile().getURI().getPath())) {
-				doc.setOwner(LinnkFatClient.currentUser, "../"+de.mxro.utils.Utils.lastElement(doc.getOwnerLink(), "/"));
+				doc.setOwner(LinnkFatClient.currentUser, "../"+mx.gwtutils.MxroGWTUtils.lastElement(doc.getOwnerLink(), "/"));
 			} else {
 				doc.setOwner(LinnkFatClient.currentUser, null);
 			}
@@ -203,7 +203,7 @@ public abstract class Copy {
 			} else {
 				String newFolderName = child.getFolder().getName();
 				if (newFolderName.equals("")) {
-					newFolderName = de.mxro.utils.Utils.lastElement(child.getFolder().getURI().toString(), "/");
+					newFolderName = mx.gwtutils.MxroGWTUtils.lastElement(child.getFolder().getURI().toString(), "/");
 				}
 				final Folder childFolder = destination.forceFolder(newFolderName);
 				if (!skipDocuments.acceptDocument(child)) {

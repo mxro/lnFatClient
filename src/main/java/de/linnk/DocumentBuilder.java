@@ -41,7 +41,7 @@ public class DocumentBuilder {
 						" folder.getURI = '"+folder.getURI()+"'", UserError.Priority.INFORMATION);
 		
 			final Folder inFolder = folder;
-			final Document res = DocumentBuilder.emptyDocument(de.mxro.utils.Utils.removeExtension(documentURI.getFileName()), creator, inFolder);
+			final Document res = DocumentBuilder.emptyDocument(mx.gwtutils.MxroGWTUtils.removeExtension(documentURI.getFileName()), creator, inFolder);
 			res.setUniqueURI(documentURI.toString());
 			final File docFile = inFolder.createFile(inFolder.getUniqueFileName(res.getSimpleName())+DocumentBuilder.documentExtension);
 			

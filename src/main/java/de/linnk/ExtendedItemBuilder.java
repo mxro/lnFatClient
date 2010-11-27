@@ -11,6 +11,8 @@ import java.util.logging.Logger;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.rtf.RTFEditorKit;
 
+import mx.gwtutils.MxroGWTUtils;
+
 import de.linnk.basispack.v05.DocumentProxy;
 import de.linnk.basispack.v05.LinnkProxy;
 import de.linnk.basispack.v05.NodeDocument;
@@ -35,8 +37,6 @@ import de.mxro.filesystem.Folder;
 import de.mxro.swing.Image;
 import de.mxro.transferable.ClipboardFacade;
 import de.mxro.utils.URIImpl;
-import de.mxro.utils.Utils;
-import de.mxro.utils.gwt.MxroGWTUtils;
 import de.mxro.utils.log.UserError;
 
 public class ExtendedItemBuilder extends ItemBuilder {
@@ -102,7 +102,7 @@ public class ExtendedItemBuilder extends ItemBuilder {
 			// try to "interprete" file
 			
 			/* import picture */
-			final String fileExtension = Utils.getExtension(file.getPath()).toLowerCase();
+			final String fileExtension = MxroGWTUtils.getExtension(file.getPath()).toLowerCase();
 			if (fileExtension.equals("jpg") ||
 					fileExtension.equals("png") ||
 					fileExtension.equals("bmp") ||
@@ -126,14 +126,14 @@ public class ExtendedItemBuilder extends ItemBuilder {
 					kit.read(stream, doc, 0);
 					final String plainText = doc.getText(0, doc.getLength());
 					
-					final SimpleLink rtfLink = DocumentBuilder.instance.createEmptyChildDocument((NodeDocument) this.getDocument(), LinnkFatClient.currentUser, Utils.removeExtension(file.getName()));
+					final SimpleLink rtfLink = DocumentBuilder.instance.createEmptyChildDocument((NodeDocument) this.getDocument(), LinnkFatClient.currentUser, MxroGWTUtils.removeExtension(file.getName()));
 					final Document rtfDoc = DocumentLoader.singelton.loadFromFile(((NodeDocument) this.getDocument()).getFolder().getFile(rtfLink.toURI()));
 					final ItemChange add = ItemChange.newNewItem(new ItemBuilder(rtfDoc, LinnkFatClient.currentUser).newTextItem(plainText), this.user);
 					rtfDoc.doChange(add);
 					Linnk.S.saveDocument(rtfDoc);
 					
 					
-					final Item link = this.newLinnkProxy(this.newTextItem(Utils.removeExtension(file.getName())), rtfLink);
+					final Item link = this.newLinnkProxy(this.newTextItem(MxroGWTUtils.removeExtension(file.getName())), rtfLink);
 					//this.getDocument().doChange(addLink);
 					return link;
 				} catch (final FileNotFoundException e) {

@@ -69,7 +69,7 @@ public class CopyHelper {
 		newDocuments.add(new ChangedLink(oldDocURI.toString(), newDocURI.toString()));
 		
 		if (newDocument.getOwnerLink() != null && !newDocument.getFile().getURI().getPath().equals(newRoot.getFile().getURI().getPath())) {
-			newDocument.setOwner(LinnkFatClient.currentUser, "../"+de.mxro.utils.Utils.lastElement(newDocument.getOwnerLink(), "/"));
+			newDocument.setOwner(LinnkFatClient.currentUser, "../"+mx.gwtutils.MxroGWTUtils.lastElement(newDocument.getOwnerLink(), "/"));
 		} else {
 			newDocument.setOwner(LinnkFatClient.currentUser, null);
 		}
@@ -92,7 +92,7 @@ public class CopyHelper {
 		
 			String newFolderName = sourceChildDocument.getFolder().getName();
 			if (newFolderName.equals("")) {
-				newFolderName = de.mxro.utils.Utils.lastElement(sourceChildDocument.getFolder().getURI().toString(), "/");
+				newFolderName = mx.gwtutils.MxroGWTUtils.lastElement(sourceChildDocument.getFolder().getURI().toString(), "/");
 			}
 			final Folder childFolder = parentFolder.forceFolder(newFolderName);
 			if (!skipDocuments.acceptDocument(sourceChildDocument)) {

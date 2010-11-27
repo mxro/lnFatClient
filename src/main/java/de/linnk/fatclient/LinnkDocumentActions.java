@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPopupMenu;
 import javax.swing.SwingUtilities;
 
+import mx.gwtutils.MxroGWTUtils;
 import net.iharder.dnd.FileDrop;
 import de.linnk.DocumentBuilder;
 import de.linnk.ExtendedItemBuilder;
@@ -65,7 +66,6 @@ import de.mxro.transferable.ClipboardFacade;
 import de.mxro.utils.URI;
 import de.mxro.utils.Utils;
 import de.mxro.utils.background.Activity;
-import de.mxro.utils.gwt.MxroGWTUtils;
 import de.mxro.utils.log.UserError;
 
 public class LinnkDocumentActions extends Actions {

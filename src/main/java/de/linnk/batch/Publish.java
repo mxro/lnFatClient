@@ -59,7 +59,7 @@ public class Publish extends Action {
 			if (!oldLink.getPath().equals(newLink.getPath())) {
 				
 				this.changedLinks.add(new ChangedLink(oldLink.toString(), newLink.toString()));
-				doc.setOwner(LinnkFatClient.currentUser,  "../"+de.mxro.utils.Utils.lastElement(doc.getOwnerLink(), "/"));
+				doc.setOwner(LinnkFatClient.currentUser,  "../"+mx.gwtutils.MxroGWTUtils.lastElement(doc.getOwnerLink(), "/"));
 			}
 			
 		}

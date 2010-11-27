@@ -1,5 +1,6 @@
 package de.linnk.transform;
 
+import mx.gwtutils.MxroGWTUtils;
 import de.linnk.ExtendedItemBuilder;
 import de.linnk.basispack.v05.DocumentProxy;
 import de.linnk.basispack.v05.LinnkProxy;
@@ -10,7 +11,6 @@ import de.linnk.domain.ProxyItem;
 import de.linnk.domain.SimpleLink;
 import de.linnk.fatclient.application.LinnkFatClient;
 import de.linnk.gwt.LinnkGWTUtils;
-import de.mxro.utils.Utils;
 
 public class ChangeOutgoingLinks extends Transformation {
 	
@@ -23,7 +23,7 @@ public class ChangeOutgoingLinks extends Transformation {
 			for (final ProxyItem pi : LinnkGWTUtils.getProxies(LinnkProxy.class, i)) {
 				if (i instanceof DocumentProxy) continue;
 				final LinnkProxy lp = (LinnkProxy) pi;
-				final Item newProxy = new ExtendedItemBuilder(doc, LinnkFatClient.currentUser).newLinnkProxy(lp.getItem(),lp.getId(), new SimpleLink(Utils.removeExtension(lp.getLink().link)+this.newExtension));
+				final Item newProxy = new ExtendedItemBuilder(doc, LinnkFatClient.currentUser).newLinnkProxy(lp.getItem(),lp.getId(), new SimpleLink(MxroGWTUtils.removeExtension(lp.getLink().link)+this.newExtension));
 				final Item newItem = de.linnk.utils.Utils.replace(doc, lp, newProxy);
 				final ItemChange ic = ItemChange.newModifyItem(newItem, i, LinnkFatClient.currentUser);
 				doc.doChange(ic);
@@ -34,7 +34,7 @@ public class ChangeOutgoingLinks extends Transformation {
 				//System.out.println(LinnkXStream.singelton.toXML(i));
 				
 				final Item newProxy = new ExtendedItemBuilder(doc, LinnkFatClient.currentUser).newDocumentProxy(lp.getItem(), lp.getId(), 
-						new SimpleLink(Utils.removeExtension(lp.getLink().link)+this.newExtension), lp.isExpanded());
+						new SimpleLink(MxroGWTUtils.removeExtension(lp.getLink().link)+this.newExtension), lp.isExpanded());
 				
 				final Item newItem = de.linnk.utils.Utils.replace(doc, lp, newProxy);
 				//System.out.println(LinnkXStream.singelton.toXML(newItem));
@@ -46,7 +46,7 @@ public class ChangeOutgoingLinks extends Transformation {
 		// OwnerItem	
 		if (doc.getOwnerLink() != null) {
 			final SimpleLink sl = new SimpleLink(doc.getOwnerLink());
-			doc.setOwner(LinnkFatClient.currentUser, Utils.removeExtension(sl.link)+this.newExtension);
+			doc.setOwner(LinnkFatClient.currentUser, MxroGWTUtils.removeExtension(sl.link)+this.newExtension);
 		}
 		
 	}
