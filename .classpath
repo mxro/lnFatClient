@@ -6,6 +6,7 @@
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry excluding="**/*.java" including="**" kind="src" path="OSGI-INF"/>
 	<classpathentry excluding="**/*.java" kind="src" path="target/scr-plugin-generated"/>
+	<classpathentry exported="true" kind="lib" path="gwt-user-2.0.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="arq-2.8.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="iri-0.8.jar"/>
 	<classpathentry exported="true" kind="lib" path="jena-2.6.2.jar"/>

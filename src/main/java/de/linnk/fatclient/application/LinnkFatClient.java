@@ -53,12 +53,12 @@ public class LinnkFatClient {
 	/**
 	 * set this to true when building release versions
 	 */
-	public static final boolean RELEASE = false;
+	public static final boolean RELEASE = true;
 	
 	public static final int MAJOR_VERSION = 0;
 	public static final int MINOR_VERSION = 9;
-	public static final int VERSION_STEP = 7;
-	public static final String ADDITION = "Build 3";
+	public static final int VERSION_STEP = 8;
+	public static final String ADDITION = "Build 1";
 	
 	/**
 	 * for some GUI issues
@@ -82,7 +82,7 @@ public class LinnkFatClient {
 	
 	
 	// Html/RDF-Files are generated in another thread!
-	public static boolean ASYNCHRON_SAVE = false;
+	public static boolean ASYNCHRON_SAVE = true;
 	
 	public static LinnkApplication application;
 	private java.io.File executable;

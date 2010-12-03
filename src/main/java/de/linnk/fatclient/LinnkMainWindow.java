@@ -284,15 +284,16 @@ public class LinnkMainWindow extends JFrame {
 		
 		
 		
-		final JMyPanel dropPanel = new JMyPanel();
-		dropPanel.setLayout(new BoxLayout(dropPanel, BoxLayout.Y_AXIS));
-		dropPanel.setMinimumSize(new Dimension(200,0));
-		final JLabel dropLabel = new JLabel("--- drop files here ---");
-		dropPanel.add(dropLabel);
+//		final JMyPanel dropPanel = new JMyPanel();
+//		dropPanel.setLayout(new BoxLayout(dropPanel, BoxLayout.Y_AXIS));
+//		dropPanel.setMinimumSize(new Dimension(200,0));
+//		final JLabel dropLabel = new JLabel("--- drop files here ---");
+//		dropPanel.add(dropLabel);
 		
-		this.getJToolBar().add(dropPanel);
+		//this.getJToolBar().add(dropPanel);
+		//this.rootPane.add(dropPanel);
 		
-		new  FileDrop( dropPanel, actions.getFileDropListener());
+		
 		
 		this.windowInterface.check();
 		

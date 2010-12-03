@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 
+import net.iharder.dnd.FileDrop;
+
 import de.linnk.fatclient.document.DocumentPanelContainer;
 
 public class LinnkTab extends JPanel {
@@ -26,13 +28,9 @@ public class LinnkTab extends JPanel {
 		
 		this.initialize();
 		this.jScrollPane.setViewportView(holder);
-		//itemToolbars = new ItemToolbars();
-		//this.getJPanelToolbars().add(itemToolbars);
-		//holder.setItemToolbars(itemToolbars);
 		
 		
-		//holder.setDocumentActionsPanel(this.getJPanelDocumentActions());
-		//holder.setSelectedItemActionsPanel(this.getJPanelItemActions());
+		
 		holder.setFileDropTargetComponent(this);
 	}
 

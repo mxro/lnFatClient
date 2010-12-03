@@ -1,38 +1,39 @@
 Manifest-Version: 1.0
 Export-Package: de.linnk.fatclient.application;uses:="de.mxro.utils.ba
  ckground,de.mxro.utils,de.mxro.filesystem,de.mxro.utils.log,com.thoug
- htworks.xstream,de.linnk.domain,com.thoughtworks.xstream.io,com.thoug
- htworks.xstream.annotations,javax.swing.text,de.mxro.utils.applicatio
- n,de.mxro.jmyspell,javax.swing,de.mxro.filesystem.ext,de.mxro.utils.l
- og.impl,de.mxro.swing.dialogwizard,javax.swing.filechooser",com.thoug
- htworks.xstream;uses:="com.thoughtworks.xstream.converters,com.though
- tworks.xstream.io",com.thoughtworks.xstream.annotations;uses:="com.th
- oughtworks.xstream.converters,com.thoughtworks.xstream",com.thoughtwo
- rks.xstream.converters;uses:="com.thoughtworks.xstream,com.thoughtwor
- ks.xstream.io",com.thoughtworks.xstream.io;uses:="com.thoughtworks.xs
- tream.converters,com.thoughtworks.xstream"
+ htworks.xstream,com.thoughtworks.xstream.io,de.linnk.domain,com.thoug
+ htworks.xstream.annotations,mx.gwtutils,javax.swing.text,de.mxro.util
+ s.application,de.mxro.jmyspell,javax.swing,de.mxro.filesystem.ext,de.
+ mxro.utils.log.impl,de.mxro.swing.dialogwizard,javax.swing.filechoose
+ r",com.thoughtworks.xstream;uses:="com.thoughtworks.xstream.converter
+ s,com.thoughtworks.xstream.io",com.thoughtworks.xstream.annotations;u
+ ses:="com.thoughtworks.xstream.converters,com.thoughtworks.xstream",c
+ om.thoughtworks.xstream.converters;uses:="com.thoughtworks.xstream,co
+ m.thoughtworks.xstream.io",com.thoughtworks.xstream.io;uses:="com.tho
+ ughtworks.xstream.converters,com.thoughtworks.xstream"
 Embed-Directory: target/dependency
-Ignore-Package: com.thoughtworks.xstream.io,com.thoughtworks.xstream.c
- onverters,com.thoughtworks.xstream.annotations,org.openide.util,com.t
- houghtworks.xstream
-Built-By: mx
+Ignore-Package: org.codehaus.jettison.mapped,org.openide.util,net.sf.c
+ glib.proxy,org.jdom.input,nu.xom,com.thoughtworks.xstream,com.sun.org
+ .apache.xml.internal.serialize,org.codehaus.jettison,sun.reflect,com.
+ thoughtworks.xstream.converters,com.thoughtworks.xstream.io,com.thoug
+ htworks.xstream.annotations,org.joda.time,org.joda.time.format,org.jd
+ om,sun.misc
+Built-By: Max
 Tool: Bnd-0.0.357
 Bundle-Name: lnFatClient
 Created-By: Apache Maven Bundle Plugin
-Build-Jdk: 1.6.0_20
+Build-Jdk: 1.6.0_22
 Bundle-Version: 0.0.1.SNAPSHOT
-Bnd-LastModified: 1282886940103
+Bnd-LastModified: 1291363938119
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: lnFatClient;singleton:=true
 Import-Package: com.hp.hpl.jena.ontology,
  com.hp.hpl.jena.rdf.model,
  com.hp.hpl.jena.shared,
- com.sun.org.apache.xml.internal.serialize;resolution:=optional,
  de.linnk.domain,
  de.linnk.fatclient.application,
  de.linnk.gwt,
  de.linnk.netbeansguis,
- de.linnk.nx,
  de.linnk.nx.swing,
  de.mxro.filesystem,
  de.mxro.filesystem.ext,
@@ -52,7 +53,6 @@ Import-Package: com.hp.hpl.jena.ontology,
  de.mxro.utils.distributedtree,
  de.mxro.utils.domain,
  de.mxro.utils.drm,
- de.mxro.utils.gwt,
  de.mxro.utils.history,
  de.mxro.utils.log,
  de.mxro.utils.log.impl,
@@ -82,30 +82,23 @@ Import-Package: com.hp.hpl.jena.ontology,
  javax.xml.transform.stream,
  mx.gwtutils,
  net.iharder.dnd,
- net.sf.cglib.proxy;resolution:=optional,
- nu.xom;resolution:=optional,
  nx.core,
- org.codehaus.jettison.mapped;resolution:=optional,
  org.dom4j,
  org.dom4j.io,
  org.dom4j.tree,
  org.dts.spell.swing,
  org.jdesktop.layout,
- org.jdom;resolution:=optional,
- org.jdom.input;resolution:=optional,
- org.joda.time;resolution:=optional,
- org.joda.time.format;resolution:=optional,
  org.w3c.dom,
  org.w3c.tidy,
  org.xml.sax,
  org.xml.sax.helpers,
- sun.misc;resolution:=optional,
- sun.reflect;resolution:=optional,
+ de.linnk.nx,
  thewebsemantic,
  thewebsemantic.vocabulary
-Embed-Dependency: wizard;inline=false;scope=compile|runtime,inclXStrea
+Embed-Dependency: wizard;inline=false;scope=compile|runtime,thrdXStrea
  m;inline=false;scope=compile|runtime
 Bundle-ClassPath: .,
+ gwt-user-2.0.4.jar,
  arq-2.8.2.jar,
  iri-0.8.jar,
  jena-2.6.2.jar,

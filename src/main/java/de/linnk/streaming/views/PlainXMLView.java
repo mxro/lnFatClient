@@ -135,6 +135,7 @@ public class PlainXMLView implements View {
 			UserError.singelton.log(this, "XSL File to be saved under URI: "+newFile.getURI(), UserError.Priority.INFORMATION);
 			
 			File newXMLDocument = this.writeXML(documentToSave, newFile, destinationFolder, xslURI);
+			if (newXMLDocument != null)
 			UserError.singelton.log(this, "XML File saved under URI: "+newXMLDocument.getURI(), UserError.Priority.INFORMATION);
 			
 			return new LoadOnDemandDocument(newXMLDocument);

@@ -6,6 +6,8 @@ import javax.swing.BoxLayout;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 
+import net.iharder.dnd.FileDrop;
+
 import de.linnk.basispack.v05.NodeDocument;
 import de.linnk.domain.Document;
 import de.linnk.fatclient.WindowInterface;
@@ -38,6 +40,7 @@ public class DocumentPanelContainer extends JPanel {
 
 	public void setFileDropTargetComponent(JComponent fileDropTargetComponent) {
 		this.fileDropTargetComponent = fileDropTargetComponent;
+		new  FileDrop( this, this.windowInterface.getLinnkDocumentActions().getFileDropListener());
 	}
 
 	public void removePanel() {

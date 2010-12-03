@@ -13,16 +13,20 @@
  !com.thoughtworks.xstream.io.xml,
  !com.thoughtworks.xstream.mapper,
   !org.openide.util,
- com.sun.org.apache.xml.internal.serialize;resolution:=optional,
-  sun.misc;resolution:=optional,
- sun.reflect;resolution:=optional,
-  org.jdom;resolution:=optional,
- org.jdom.input;resolution:=optional,
- org.joda.time;resolution:=optional,
- org.joda.time.format;resolution:=optional,
-  net.sf.cglib.proxy;resolution:=optional,
- nu.xom;resolution:=optional,
- org.codehaus.jettison.mapped;resolution:=optional,
+ !com.sun.org.apache.xml.internal.serialize,
+  !sun.misc,
+ !sun.reflect,
+  !org.jdom,
+ !org.jdom.input,
+ !org.joda.time,
+ !org.joda.time.format,
+  !net.sf.cglib.proxy,
+ !nu.xom,
+ !org.codehaus.jettison,
+ !org.codehaus.jettison.mapped,
+ !org.xmlpull.mxp1,
+ !org.xmlpull.v1,
+ de.linnk.nx,
  org.jdesktop.layout,
  org.dom4j.io,
  de.mxro.image,
@@ -39,7 +43,7 @@
  com.thoughtworks.xstream.converters,
  com.thoughtworks.xstream.io
 		</module.exportedPackages>
-		<module.embeddedDependencies>wizard;inline=false;scope=compile|runtime,inclXStream;inline=false;scope=compile|runtime
+		<module.embeddedDependencies>wizard;inline=false;scope=compile|runtime,thrdXStream;inline=false;scope=compile|runtime
 		</module.embeddedDependencies>
 		<module.serviceDefinitions>
 		</module.serviceDefinitions>
@@ -292,6 +296,24 @@
 				Keep the MANIFEST.MF used by eclipse in sync with the MANIFEST.MF
 				created by the maven bundle plugin
 			-->
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<delete file="${basedir}/META-INF/MANIFEST.MF" />
+								<copy file="target/classes/META-INF/MANIFEST.MF" tofile="${basedir}/META-INF/MANIFEST.MF" />
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			
 			<plugin>
 				<artifactId>maven-antrun-plugin</artifactId>
 				<executions>

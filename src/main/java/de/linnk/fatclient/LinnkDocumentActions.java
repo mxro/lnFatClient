@@ -235,29 +235,31 @@ public class LinnkDocumentActions extends Actions {
 		@Override
 		protected void myActionPerformed(ActionEvent e) {
 			String res = "";
-			LinnkFatClient.application.getProgress().initProgress("Nuke Versions");
-			final Vector<URI> docs = de.linnk.utils.Utils.getAllDocuments(this.getItemsPanel().getDocument());
-			//res = new Batch().doForAllDocuments(this.getItemsPanel().getDocument().getFolder(), docs, new SaveAll(Linnk.application.getDefaultView()), Linnk.application.getProgress());
+			this.getItemsPanel().getDocument().nukeVersions();
 			
-			res = new Batch().doForAllDocuments(this.getItemsPanel().getDocument().getFolder(), docs, new TransformationAction(new Transformation(Transformation.NONE) { 
-				
-				@Override
-				public void applyTransformation(Document doc) {
-					doc.nukeVersions();
-					doc.touch();
-				}
-				
-			}), LinnkFatClient.application.getProgress());
-			
-			//System.out.println("complete!");
-			LinnkFatClient.application.getProgress().stopProgress();
+//			LinnkFatClient.application.getProgress().initProgress("Nuke Versions");
+//			final Vector<URI> docs = de.linnk.utils.Utils.getAllDocuments(this.getItemsPanel().getDocument());
+//			//res = new Batch().doForAllDocuments(this.getItemsPanel().getDocument().getFolder(), docs, new SaveAll(Linnk.application.getDefaultView()), Linnk.application.getProgress());
+//			
+//			res = new Batch().doForAllDocuments(this.getItemsPanel().getDocument().getFolder(), docs, new TransformationAction(new Transformation(Transformation.NONE) { 
+//				
+//				@Override
+//				public void applyTransformation(Document doc) {
+//					doc.nukeVersions();
+//					doc.touch();
+//				}
+//				
+//			}), LinnkFatClient.application.getProgress());
+//			
+//			//System.out.println("complete!");
+//			LinnkFatClient.application.getProgress().stopProgress();
 		}
     	
 		public NukeVersions() {
 			super();
 			
 			this.putValue(Action.NAME, "Nuke Versions");
-			this.putValue(Action.SHORT_DESCRIPTION, "Deletes all version information for this document and all of its children.");
+			this.putValue(Action.SHORT_DESCRIPTION, "Deletes previous versions for this document.");
 		    //putValue(Action.LARGE_ICON_KEY, ...);
 		    //putValue(Action.SMALL_ICON, ...);
 		    //putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_N));

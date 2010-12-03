@@ -55,13 +55,13 @@ public class DocumentLoader {
 			final File ownFile = file;
 			assert (ownFile != null);
 			doc.setFilename(ownFile.getName());
-			// check whether document needs special file system
 			
+			// check whether document needs special file system	
 			FileSystem fileSystem = file.getFileSystem();
-			if (!doc.getUniqueURI().equals(ownFile.getURI().toString())) {
+			if (!doc.getUniqueURI().equals(ownFile.getURI().toString()) && ownFile.getURI().getFile().exists()) {
 				fileSystem =new FileSystemAddressMapper(LocalFileSystem.singelton, 
 					new VirtualRealAddressMapper(URIImpl.create(doc.getUniqueURI()).getFolder(), ownFile.getURI().getFolder()));
-				UserError.singelton.log(this, "loadFromFile: creates virtual file system '"+doc.getUniqueURI()+"'"
+				UserError.singelton.log(this, "loadFromFile: creates virtual file system "+file.getURI().getFolder()+" <"+URIImpl.create(doc.getUniqueURI()).getFolder()+"> to <"+ownFile.getURI().getFolder()+">"
 						, UserError.Priority.INFORMATION);
 			}
 				
