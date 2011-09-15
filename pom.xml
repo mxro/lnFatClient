@@ -2,46 +2,45 @@
 <project>
 
 	<properties>
-		<module.group>de.linnk.fatclient</module.group>    <!--  Maven groupId -->
-		<module.name>lnFatClient</module.name>             <!--  Maven artifactId -->
-		<module.version>0.0.1-SNAPSHOT</module.version> <!--  Maven artifact version -->
+		<module.group>de.linnk.fatclient</module.group>    <!-- Maven groupId -->
+		<module.name>lnFatClient</module.name>             <!-- Maven artifactId -->
+		<module.version>0.0.1-SNAPSHOT</module.version> <!-- Maven artifact version -->
 		<module.importedPackages>!org.junit,
-		!com.thoughtworks.xstream,
- !com.thoughtworks.xstream.annotations,
- !com.thoughtworks.xstream.converters,
- !com.thoughtworks.xstream.io,
- !com.thoughtworks.xstream.io.xml,
- !com.thoughtworks.xstream.mapper,
-  !org.openide.util,
- !com.sun.org.apache.xml.internal.serialize,
-  !sun.misc,
- !sun.reflect,
-  !org.jdom,
- !org.jdom.input,
- !org.joda.time,
- !org.joda.time.format,
-  !net.sf.cglib.proxy,
- !nu.xom,
- !org.codehaus.jettison,
- !org.codehaus.jettison.mapped,
- !org.xmlpull.mxp1,
- !org.xmlpull.v1,
- de.linnk.nx,
- org.jdesktop.layout,
- org.dom4j.io,
- de.mxro.image,
- nx.core,
- de.linnk.domain*,
- mx.gwtutils,
- *
+			!com.thoughtworks.xstream,
+			!com.thoughtworks.xstream.annotations,
+			!com.thoughtworks.xstream.converters,
+			!com.thoughtworks.xstream.io,
+			!com.thoughtworks.xstream.io.xml,
+			!com.thoughtworks.xstream.mapper,
+			!org.openide.util,
+			!com.sun.org.apache.xml.internal.serialize,
+			!sun.misc,
+			!sun.reflect,
+			!org.jdom,
+			!org.jdom.input,
+			!org.joda.time,
+			!org.joda.time.format,
+			!net.sf.cglib.proxy,
+			!nu.xom,
+			!org.codehaus.jettison,
+			!org.codehaus.jettison.mapped,
+			!org.xmlpull.mxp1,
+			!org.xmlpull.v1,
+			de.linnk.nx,
+			org.jdesktop.layout,
+			org.dom4j.io,
+			de.mxro.image,
+			nx.core,
+			de.linnk.domain*,
+			mx.gwtutils,
+			*
 		</module.importedPackages>
-		<!-- <module.exportedContents>
-		</module.exportedContents>-->
+		<!-- <module.exportedContents> </module.exportedContents> -->
 		<module.exportedPackages>de.linnk.fatclient.application,
-		com.thoughtworks.xstream,
- com.thoughtworks.xstream.annotations,
- com.thoughtworks.xstream.converters,
- com.thoughtworks.xstream.io
+			com.thoughtworks.xstream,
+			com.thoughtworks.xstream.annotations,
+			com.thoughtworks.xstream.converters,
+			com.thoughtworks.xstream.io
 		</module.exportedPackages>
 		<module.embeddedDependencies>wizard;inline=false;scope=compile|runtime,thrdXStream;inline=false;scope=compile|runtime
 		</module.embeddedDependencies>
@@ -52,12 +51,12 @@
 	<!-- DEPENDENCIES -->
 	<dependencies>
 		<dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.8.1</version>
-    <scope>test</scope>
-</dependency>
-		
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>de.linnk.domain</groupId>
 			<artifactId>lnDomain</artifactId>
@@ -113,16 +112,12 @@
 			<optional>false</optional>
 		</dependency>
 
-		<!-- <dependency>
-			<groupId>de.mxro.incl.xstream</groupId>
-			<artifactId>inclXStream</artifactId>
-			<version>[0.0.1,)</version>
-			<optional>false</optional>
-		</dependency>-->
+		<!-- <dependency> <groupId>de.mxro.incl.xstream</groupId> <artifactId>inclXStream</artifactId> 
+			<version>[0.0.1,)</version> <optional>false</optional> </dependency> -->
 		<dependency>
-		<groupId>de.mxro.thrd.xstream</groupId>
-	<artifactId>thrdXStream</artifactId>
-	<version>[0.0.1,)</version>
+			<groupId>de.mxro.thrd.xstream</groupId>
+			<artifactId>thrdXStream</artifactId>
+			<version>[0.0.1,)</version>
 		</dependency>
 
 		<dependency>
@@ -174,7 +169,7 @@
 			<version>[0.0.1,)</version>
 			<optional>false</optional>
 		</dependency>
-		
+
 
 	</dependencies>
 
@@ -187,20 +182,20 @@
 
 	<build>
 		<plugins>
-		<!-- FOR DECLARATIVE SERVICES -->
-		    <plugin>
-<groupId>org.apache.felix</groupId>
-<artifactId>maven-scr-plugin</artifactId>
-<executions>
-<execution>
-<id>generate-scr-scrdescriptor</id>
-<goals>
-<goal>scr</goal>
-</goals>
-</execution>
-</executions>
-</plugin>
-		
+			<!-- FOR DECLARATIVE SERVICES -->
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-scr-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>generate-scr-scrdescriptor</id>
+						<goals>
+							<goal>scr</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
@@ -209,7 +204,7 @@
 				</configuration>
 			</plugin>
 			<!-- FOR BUNDLE MANAGEMENT -->
-			<!--  The Maven bundle plugin generates Meta-data required for OSGi  -->
+			<!-- The Maven bundle plugin generates Meta-data required for OSGi -->
 
 			<plugin>
 				<groupId>org.apache.felix</groupId>
@@ -226,7 +221,7 @@
 						<Embed-Dependency>${module.embeddedDependencies}
 						</Embed-Dependency>
 						<Embed-Directory>target/dependency</Embed-Directory>
-						<!-- <_exportcontents>${module.exportedContents}</_exportcontents>-->
+						<!-- <_exportcontents>${module.exportedContents}</_exportcontents> -->
 					</instructions>
 				</configuration>
 			</plugin>
@@ -234,11 +229,9 @@
 
 
 			<!-- FOR MAVEN ECLIPSE PLUGIN -->
-			<!--
-				Dependency Plugin used to copy the dependency JARs into the root
-				project folder. There the Maven eclipse plugin will add them to the
-				classpath of PDE projects.
-			-->
+			<!-- Dependency Plugin used to copy the dependency JARs into the root 
+				project folder. There the Maven eclipse plugin will add them to the classpath 
+				of PDE projects. -->
 			<plugin>
 				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
@@ -273,9 +266,7 @@
 				</executions>
 			</plugin>
 
-			<!--
-				Cleanup necessary because of PDE tweaks, clear the project directory
-			-->
+			<!-- Cleanup necessary because of PDE tweaks, clear the project directory -->
 			<plugin>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>2.3</version>
@@ -292,10 +283,8 @@
 				</configuration>
 			</plugin>
 
-			<!--
-				Keep the MANIFEST.MF used by eclipse in sync with the MANIFEST.MF
-				created by the maven bundle plugin
-			-->
+			<!-- Keep the MANIFEST.MF used by eclipse in sync with the MANIFEST.MF 
+				created by the maven bundle plugin -->
 			<plugin>
 				<artifactId>maven-antrun-plugin</artifactId>
 				<executions>
@@ -313,7 +302,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 			<plugin>
 				<artifactId>maven-antrun-plugin</artifactId>
 				<executions>
@@ -329,8 +318,9 @@
 							</tasks>
 							<tasks>
 								<delete file="${basedir}/OSGI-INF" />
-								<copy todir="${basedir}/OSGI-INF" >
-								  <fileset dir="target/scr-plugin-generated/OSGI-INF" includes="**" />
+								<copy todir="${basedir}/OSGI-INF">
+									<fileset dir="target/scr-plugin-generated/OSGI-INF"
+										includes="**" />
 								</copy>
 							</tasks>
 						</configuration>
@@ -344,14 +334,11 @@
 
 		<!-- RESOURCES -->
 		<resources>
-			<!--
-				This entry makes sure that resources, which lie in the same package
-				as Java classes, are copied into the target. Often external
-				libraries require resources, which are loaded using
-				Class.getResource or Class.getResourceAsStream and which are in a
-				subpackage of the class. For instance, the NetBeans template for the
-				Swing Application Framework does so.
-			-->
+			<!-- This entry makes sure that resources, which lie in the same package 
+				as Java classes, are copied into the target. Often external libraries require 
+				resources, which are loaded using Class.getResource or Class.getResourceAsStream 
+				and which are in a subpackage of the class. For instance, the NetBeans template 
+				for the Swing Application Framework does so. -->
 			<resource>
 				<filtering>false</filtering>
 				<directory>src/main/java</directory>
@@ -362,10 +349,8 @@
 					<exclude>**/*.java</exclude>
 				</excludes>
 			</resource>
-			<!--
-				This entry makes sure component definitions for OSGi declarative
-				services are copied into the destination
-			-->
+			<!-- This entry makes sure component definitions for OSGi declarative 
+				services are copied into the destination -->
 			<resource>
 				<targetPath>OSGI-INF</targetPath>
 				<filtering>false</filtering>
@@ -374,10 +359,8 @@
 					<include>**</include>
 				</includes>
 			</resource>
-			<!--
-				I really do not know why know a manual entry for src/main/resources
-				is necessary? It should be included following the Maven convention.
-			-->
+			<!-- I really do not know why know a manual entry for src/main/resources 
+				is necessary? It should be included following the Maven convention. -->
 			<resource>
 				<filtering>false</filtering>
 				<directory>src/main/resources</directory>
