@@ -1,36 +1,20 @@
 Manifest-Version: 1.0
-Export-Package: de.linnk.fatclient.application;
-  uses:="de.mxro.utils.background,
-   de.mxro.utils,
-   de.mxro.filesystem,
-   de.mxro.utils.log,
-   com.thoughtworks.xstream,
-   com.thoughtworks.xstream.io,
-   de.linnk.domain,
-   com.thoughtworks.xstream.annotations,
-   mx.gwtutils,
-   javax.swing.text,
-   de.mxro.utils.application,
-   de.mxro.jmyspell,
-   javax.swing,
-   de.mxro.filesystem.ext,
-   de.mxro.utils.log.impl,
-   de.mxro.swing.dialogwizard,
-   javax.swing.filechooser"
+Export-Package: de.linnk.fatclient.application;uses:="de.mxro.utils.ba
+ ckground,de.mxro.utils,de.mxro.filesystem,de.mxro.utils.log,com.thoug
+ htworks.xstream,com.thoughtworks.xstream.io,de.linnk.domain,com.thoug
+ htworks.xstream.annotations,com.thoughtworks.xstream.io.xml,mx.gwtuti
+ ls,javax.swing.text,de.mxro.utils.application,de.mxro.jmyspell,javax.
+ swing,de.mxro.filesystem.ext,de.mxro.utils.log.impl,de.mxro.swing.dia
+ logwizard,javax.swing.filechooser"
+Ignore-Package: com.sun.org.apache.xml.internal.serialize
 Embed-Directory: target/dependency
-Ignore-Package: org.codehaus.jettison.mapped,org.openide.util,net.sf.c
- glib.proxy,org.jdom.input,nu.xom,com.thoughtworks.xstream,com.sun.org
- .apache.xml.internal.serialize,org.codehaus.jettison,sun.reflect,com.
- thoughtworks.xstream.converters,com.thoughtworks.xstream.io,com.thoug
- htworks.xstream.annotations,org.joda.time,org.joda.time.format,org.jd
- om,sun.misc
-Built-By: Max
-Tool: Bnd-0.0.357
+Built-By: mroh004
+Tool: Bnd-1.15.0
 Bundle-Name: lnFatClient
 Created-By: Apache Maven Bundle Plugin
-Build-Jdk: 1.6.0_22
+Build-Jdk: 1.6.0_27
 Bundle-Version: 0.0.2.SNAPSHOT
-Bnd-LastModified: 1291363938119
+Bnd-LastModified: 1316139937248
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: lnFatClient;singleton:=true
 Import-Package: com.hp.hpl.jena.ontology,
@@ -58,7 +42,6 @@ Import-Package: com.hp.hpl.jena.ontology,
  com.thoughtworks.xstream.mapper,
  com.thoughtworks.xstream.persistence,
  de.linnk.domain,
- de.linnk.fatclient.application,
  de.linnk.gwt,
  de.linnk.netbeansguis,
  de.linnk.nx,
@@ -87,42 +70,31 @@ Import-Package: com.hp.hpl.jena.ontology,
  de.mxro.utils.progress,
  de.mxro.xml,
  de.mxro.xml.style,
- javax.accessibility,
- javax.imageio,
- javax.security.auth,
  javax.swing,
  javax.swing.border,
- javax.swing.colorchooser,
  javax.swing.event,
  javax.swing.filechooser,
- javax.swing.plaf,
- javax.swing.table,
  javax.swing.text,
  javax.swing.text.rtf,
- javax.swing.tree,
- javax.xml.datatype,
- javax.xml.namespace,
  javax.xml.parsers,
- javax.xml.stream,
  javax.xml.transform,
  javax.xml.transform.dom,
- javax.xml.transform.sax,
  javax.xml.transform.stream,
  mx.gwtutils,
  net.iharder.dnd,
  nx.core,
- org.dom4j,
  org.dom4j.io,
- org.dom4j.tree,
  org.dts.spell.swing,
  org.jdesktop.layout,
+ org.junit,
+ org.netbeans.api.wizard,
+ org.netbeans.spi.wizard,
  org.w3c.dom,
  org.w3c.tidy,
  org.xml.sax,
  org.xml.sax.helpers,
  thewebsemantic,
  thewebsemantic.vocabulary
-Embed-Dependency: wizard;inline=false;scope=compile|runtime
 Bundle-ClassPath: .,
  arq-2.8.2.jar,
  iri-0.8.jar,

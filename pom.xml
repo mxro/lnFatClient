@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
 
+	<groupId>de.linnk.fatclient</groupId>
+	<artifactId>lnFatClient</artifactId>
+	<version>0.0.2-SNAPSHOT</version>
+	<name>lnFatClient</name>
+
 	<properties>
-		<module.group>de.linnk.fatclient</module.group>    <!-- Maven groupId -->
-		<module.name>lnFatClient</module.name>             <!-- Maven artifactId -->
-		<module.version>0.0.2-SNAPSHOT</module.version> <!-- Maven artifact version -->
-		<module.importedPackages>org.junit,
+
+
+		<module.importedPackages>
+			org.junit,
 			com.thoughtworks.xstream,
 			com.thoughtworks.xstream.annotations,
 			com.thoughtworks.xstream.converters,
 			com.thoughtworks.xstream.io,
 			com.thoughtworks.xstream.io.xml,
-			com.thoughtworks.xstream.mapper,	
-			<!-- 
+			com.thoughtworks.xstream.mapper,
+			com.thoughtworks.xstream.core.util,
+			com.thoughtworks.xstream.converters.reflection,
+			de.mxro.shef,
 			!com.sun.org.apache.xml.internal.serialize,
-			sun.misc,
-			sun.reflect,
-			!org.jdom,
-			!org.jdom.input,
-			!org.joda.time,
-			!org.joda.time.format,
-			!net.sf.cglib.proxy,
-			!nu.xom,-->
-			org.codehaus.jettison,
-			org.codehaus.jettison.mapped,
-			org.xmlpull.mxp1,
-			org.xmlpull.v1,
+			!org.codehaus.jettison,
+ !org.codehaus.jettison.mapped,
+ !org.xmlpull.mxp1,
+ !org.xmlpull.v1,
+			<!-- !com.sun.org.apache.xml.internal.serialize, sun.misc, sun.reflect, 
+				!org.jdom, !org.jdom.input, !org.joda.time, !org.joda.time.format, !net.sf.cglib.proxy, 
+				!nu.xom, -->
 			de.linnk.nx,
 			org.jdesktop.layout,
 			org.dom4j.io,
@@ -67,7 +69,7 @@
 			<optional>false</optional>
 		</dependency>
 
-		<dependency>
+		 <dependency>
 			<groupId>de.mxro.thrd.jenabean</groupId>
 			<artifactId>thrdJenaBean</artifactId>
 			<version>[0.0.1,)</version>
@@ -104,12 +106,12 @@
 
 		<!-- <dependency> <groupId>de.mxro.incl.xstream</groupId> <artifactId>inclXStream</artifactId> 
 			<version>[0.0.1,)</version> <optional>false</optional> </dependency> -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>de.mxro.thrd.xstream</groupId>
 			<artifactId>thrdXStream</artifactId>
 			<version>[0.0.1,)</version>
-		</dependency>
-		
+		</dependency>-->
+
 		<dependency>
 			<groupId>de.mxro.thrd.netbeanswizard</groupId>
 			<artifactId>thrdNetbeansWizard</artifactId>
@@ -170,10 +172,7 @@
 	</dependencies>
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>${module.group}</groupId>
-	<artifactId>${module.name}</artifactId>
-	<version>${module.version}</version>
-	<name>${module.name}</name>
+
 	<packaging>bundle</packaging>
 
 	<build>
@@ -245,21 +244,11 @@
 							<overWriteIfNewer>true</overWriteIfNewer>
 						</configuration>
 					</execution>
-					<!-- for eclipse pde -->
-					<execution>
-						<id>copy-dependencies2</id>
-						<phase>process-sources</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-						<configuration>
-							<includeArtifactIds>inclXStream,wizard</includeArtifactIds>
-							<outputDirectory>${basedir}/target/dependency</outputDirectory>
-							<overWriteReleases>false</overWriteReleases>
-							<overWriteSnapshots>false</overWriteSnapshots>
-							<overWriteIfNewer>true</overWriteIfNewer>
-						</configuration>
-					</execution>
+					<!-- for eclipse pde <execution> <id>copy-dependencies2</id> <phase>process-sources</phase> 
+						<goals> <goal>copy-dependencies</goal> </goals> <configuration> <includeArtifactIds>inclXStream,wizard</includeArtifactIds> 
+						<outputDirectory>${basedir}/target/dependency</outputDirectory> <overWriteReleases>false</overWriteReleases> 
+						<overWriteSnapshots>false</overWriteSnapshots> <overWriteIfNewer>true</overWriteIfNewer> 
+						</configuration> </execution> -->
 				</executions>
 			</plugin>
 
@@ -282,23 +271,6 @@
 
 			<!-- Keep the MANIFEST.MF used by eclipse in sync with the MANIFEST.MF 
 				created by the maven bundle plugin -->
-			<plugin>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<configuration>
-							<tasks>
-								<delete file="${basedir}/META-INF/MANIFEST.MF" />
-								<copy file="target/classes/META-INF/MANIFEST.MF" tofile="${basedir}/META-INF/MANIFEST.MF" />
-							</tasks>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 
 			<plugin>
 				<artifactId>maven-antrun-plugin</artifactId>
@@ -313,14 +285,6 @@
 								<delete file="${basedir}/META-INF/MANIFEST.MF" />
 								<copy file="target/classes/META-INF/MANIFEST.MF" tofile="${basedir}/META-INF/MANIFEST.MF" />
 							</tasks>
-						</configuration>
-					</execution>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<configuration>
 							<tasks>
 								<delete file="${basedir}/OSGI-INF" />
 								<copy todir="${basedir}/OSGI-INF">
@@ -330,6 +294,7 @@
 							</tasks>
 						</configuration>
 					</execution>
+
 				</executions>
 			</plugin>
 
