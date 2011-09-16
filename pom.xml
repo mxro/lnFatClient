@@ -7,8 +7,6 @@
 	<name>lnFatClient</name>
 
 	<properties>
-
-
 		<module.importedPackages>
 			org.junit,
 			com.thoughtworks.xstream,
@@ -22,9 +20,9 @@
 			de.mxro.shef,
 			!com.sun.org.apache.xml.internal.serialize,
 			!org.codehaus.jettison,
- !org.codehaus.jettison.mapped,
- !org.xmlpull.mxp1,
- !org.xmlpull.v1,
+			!org.codehaus.jettison.mapped,
+			!org.xmlpull.mxp1,
+			!org.xmlpull.v1,
 			<!-- !com.sun.org.apache.xml.internal.serialize, sun.misc, sun.reflect, 
 				!org.jdom, !org.jdom.input, !org.joda.time, !org.joda.time.format, !net.sf.cglib.proxy, 
 				!nu.xom, -->
@@ -69,7 +67,7 @@
 			<optional>false</optional>
 		</dependency>
 
-		 <dependency>
+		<dependency>
 			<groupId>de.mxro.thrd.jenabean</groupId>
 			<artifactId>thrdJenaBean</artifactId>
 			<version>[0.0.1,)</version>
@@ -106,11 +104,8 @@
 
 		<!-- <dependency> <groupId>de.mxro.incl.xstream</groupId> <artifactId>inclXStream</artifactId> 
 			<version>[0.0.1,)</version> <optional>false</optional> </dependency> -->
-		<!-- <dependency>
-			<groupId>de.mxro.thrd.xstream</groupId>
-			<artifactId>thrdXStream</artifactId>
-			<version>[0.0.1,)</version>
-		</dependency>-->
+		<!-- <dependency> <groupId>de.mxro.thrd.xstream</groupId> <artifactId>thrdXStream</artifactId> 
+			<version>[0.0.1,)</version> </dependency> -->
 
 		<dependency>
 			<groupId>de.mxro.thrd.netbeanswizard</groupId>
@@ -285,13 +280,13 @@
 								<delete file="${basedir}/META-INF/MANIFEST.MF" />
 								<copy file="target/classes/META-INF/MANIFEST.MF" tofile="${basedir}/META-INF/MANIFEST.MF" />
 							</tasks>
-							<tasks>
+							<!-- <tasks>
 								<delete file="${basedir}/OSGI-INF" />
 								<copy todir="${basedir}/OSGI-INF">
 									<fileset dir="target/scr-plugin-generated/OSGI-INF"
 										includes="**" />
 								</copy>
-							</tasks>
+							</tasks>-->
 						</configuration>
 					</execution>
 
