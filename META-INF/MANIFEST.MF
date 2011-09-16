@@ -14,7 +14,7 @@ Bundle-Name: lnFatClient
 Created-By: Apache Maven Bundle Plugin
 Build-Jdk: 1.6.0_27
 Bundle-Version: 0.0.2.SNAPSHOT
-Bnd-LastModified: 1316147675993
+Bnd-LastModified: 1316160189675
 Bundle-ManifestVersion: 2
 Import-Package: com.hp.hpl.jena.ontology,com.hp.hpl.jena.rdf.model,com
  .hp.hpl.jena.shared,com.thoughtworks.xstream,com.thoughtworks.xstream

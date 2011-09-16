@@ -9,7 +9,7 @@ import com.thoughtworks.xstream.converters.reflection.Sun14ReflectionProvider;
 import com.thoughtworks.xstream.core.util.CompositeClassLoader;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
-import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.io.xml.XppDomDriver;
 
 import de.linnk.basispack.v05.BasisPack;
 import de.linnk.basispack.v05.NodeDocument;
@@ -72,10 +72,15 @@ public class LinnkXStream {
 		final CompositeClassLoader cl = new CompositeClassLoader();
 		cl.add(LinnkXStream.class.getClassLoader());
 		cl.add(XStream.class.getClassLoader());
+		cl.add(javax.xml.parsers.DocumentBuilderFactory.class.getClassLoader());
 		cl.add(MxroEditorPane.class.getClassLoader());
 		
-		this.xstream = new XStream(new Sun14ReflectionProvider(),
-				new DomDriver("UTF-8"), cl);
+		javax.xml.parsers.DocumentBuilderFactory.class.getClass();
+		
+		//final XStream temp = new XStream();
+		
+		this.xstream = new XStream(new Sun14ReflectionProvider(),//temp.getReflectionProvider(),
+				new XppDomDriver(), cl);
 		this.updater = new Updater();
 
 		// de.mxro.xstream.filesystem.v01.XStreamStreamer.registerAllAnnotations(this.xstream);
