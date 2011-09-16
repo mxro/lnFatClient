@@ -4,28 +4,28 @@
 	<properties>
 		<module.group>de.linnk.fatclient</module.group>    <!-- Maven groupId -->
 		<module.name>lnFatClient</module.name>             <!-- Maven artifactId -->
-		<module.version>0.0.1-SNAPSHOT</module.version> <!-- Maven artifact version -->
-		<module.importedPackages>!org.junit,
-			!com.thoughtworks.xstream,
-			!com.thoughtworks.xstream.annotations,
-			!com.thoughtworks.xstream.converters,
-			!com.thoughtworks.xstream.io,
-			!com.thoughtworks.xstream.io.xml,
-			!com.thoughtworks.xstream.mapper,
-			!org.openide.util,
+		<module.version>0.0.2-SNAPSHOT</module.version> <!-- Maven artifact version -->
+		<module.importedPackages>org.junit,
+			com.thoughtworks.xstream,
+			com.thoughtworks.xstream.annotations,
+			com.thoughtworks.xstream.converters,
+			com.thoughtworks.xstream.io,
+			com.thoughtworks.xstream.io.xml,
+			com.thoughtworks.xstream.mapper,	
+			<!-- 
 			!com.sun.org.apache.xml.internal.serialize,
-			!sun.misc,
-			!sun.reflect,
+			sun.misc,
+			sun.reflect,
 			!org.jdom,
 			!org.jdom.input,
 			!org.joda.time,
 			!org.joda.time.format,
 			!net.sf.cglib.proxy,
-			!nu.xom,
-			!org.codehaus.jettison,
-			!org.codehaus.jettison.mapped,
-			!org.xmlpull.mxp1,
-			!org.xmlpull.v1,
+			!nu.xom,-->
+			org.codehaus.jettison,
+			org.codehaus.jettison.mapped,
+			org.xmlpull.mxp1,
+			org.xmlpull.v1,
 			de.linnk.nx,
 			org.jdesktop.layout,
 			org.dom4j.io,
@@ -36,13 +36,9 @@
 			*
 		</module.importedPackages>
 		<!-- <module.exportedContents> </module.exportedContents> -->
-		<module.exportedPackages>de.linnk.fatclient.application,
-			com.thoughtworks.xstream,
-			com.thoughtworks.xstream.annotations,
-			com.thoughtworks.xstream.converters,
-			com.thoughtworks.xstream.io
+		<module.exportedPackages>de.linnk.fatclient.application
 		</module.exportedPackages>
-		<module.embeddedDependencies>wizard;inline=false;scope=compile|runtime,thrdXStream;inline=false;scope=compile|runtime
+		<module.embeddedDependencies>
 		</module.embeddedDependencies>
 		<module.serviceDefinitions>
 		</module.serviceDefinitions>
@@ -100,12 +96,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.netbeans.spi.wizard</groupId>
-			<artifactId>wizard</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-
-		<dependency>
 			<groupId>de.mxro.xml</groupId>
 			<artifactId>mxXml</artifactId>
 			<version>[0.0.1,)</version>
@@ -117,6 +107,12 @@
 		<dependency>
 			<groupId>de.mxro.thrd.xstream</groupId>
 			<artifactId>thrdXStream</artifactId>
+			<version>[0.0.1,)</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>de.mxro.thrd.netbeanswizard</groupId>
+			<artifactId>thrdNetbeansWizard</artifactId>
 			<version>[0.0.1,)</version>
 		</dependency>
 
@@ -210,6 +206,7 @@
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
 				<extensions>true</extensions>
+				<version>2.2.0</version>
 				<configuration>
 					<instructions>
 						<Bundle-SymbolicName>${pom.artifactId}</Bundle-SymbolicName>
@@ -316,6 +313,14 @@
 								<delete file="${basedir}/META-INF/MANIFEST.MF" />
 								<copy file="target/classes/META-INF/MANIFEST.MF" tofile="${basedir}/META-INF/MANIFEST.MF" />
 							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
 							<tasks>
 								<delete file="${basedir}/OSGI-INF" />
 								<copy todir="${basedir}/OSGI-INF">

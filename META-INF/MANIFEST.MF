@@ -1,16 +1,22 @@
 Manifest-Version: 1.0
-Export-Package: de.linnk.fatclient.application;uses:="de.mxro.utils.ba
- ckground,de.mxro.utils,de.mxro.filesystem,de.mxro.utils.log,com.thoug
- htworks.xstream,com.thoughtworks.xstream.io,de.linnk.domain,com.thoug
- htworks.xstream.annotations,mx.gwtutils,javax.swing.text,de.mxro.util
- s.application,de.mxro.jmyspell,javax.swing,de.mxro.filesystem.ext,de.
- mxro.utils.log.impl,de.mxro.swing.dialogwizard,javax.swing.filechoose
- r",com.thoughtworks.xstream;uses:="com.thoughtworks.xstream.converter
- s,com.thoughtworks.xstream.io",com.thoughtworks.xstream.annotations;u
- ses:="com.thoughtworks.xstream.converters,com.thoughtworks.xstream",c
- om.thoughtworks.xstream.converters;uses:="com.thoughtworks.xstream,co
- m.thoughtworks.xstream.io",com.thoughtworks.xstream.io;uses:="com.tho
- ughtworks.xstream.converters,com.thoughtworks.xstream"
+Export-Package: de.linnk.fatclient.application;
+  uses:="de.mxro.utils.background,
+   de.mxro.utils,
+   de.mxro.filesystem,
+   de.mxro.utils.log,
+   com.thoughtworks.xstream,
+   com.thoughtworks.xstream.io,
+   de.linnk.domain,
+   com.thoughtworks.xstream.annotations,
+   mx.gwtutils,
+   javax.swing.text,
+   de.mxro.utils.application,
+   de.mxro.jmyspell,
+   javax.swing,
+   de.mxro.filesystem.ext,
+   de.mxro.utils.log.impl,
+   de.mxro.swing.dialogwizard,
+   javax.swing.filechooser"
 Embed-Directory: target/dependency
 Ignore-Package: org.codehaus.jettison.mapped,org.openide.util,net.sf.c
  glib.proxy,org.jdom.input,nu.xom,com.thoughtworks.xstream,com.sun.org
@@ -23,17 +29,39 @@ Tool: Bnd-0.0.357
 Bundle-Name: lnFatClient
 Created-By: Apache Maven Bundle Plugin
 Build-Jdk: 1.6.0_22
-Bundle-Version: 0.0.1.SNAPSHOT
+Bundle-Version: 0.0.2.SNAPSHOT
 Bnd-LastModified: 1291363938119
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: lnFatClient;singleton:=true
 Import-Package: com.hp.hpl.jena.ontology,
  com.hp.hpl.jena.rdf.model,
  com.hp.hpl.jena.shared,
+ com.thoughtworks.xstream,
+ com.thoughtworks.xstream.alias,
+ com.thoughtworks.xstream.annotations,
+ com.thoughtworks.xstream.converters,
+ com.thoughtworks.xstream.converters.basic,
+ com.thoughtworks.xstream.converters.collections,
+ com.thoughtworks.xstream.converters.enums,
+ com.thoughtworks.xstream.converters.extended,
+ com.thoughtworks.xstream.converters.javabean,
+ com.thoughtworks.xstream.converters.reflection,
+ com.thoughtworks.xstream.core,
+ com.thoughtworks.xstream.core.util,
+ com.thoughtworks.xstream.io,
+ com.thoughtworks.xstream.io.binary,
+ com.thoughtworks.xstream.io.copy,
+ com.thoughtworks.xstream.io.json,
+ com.thoughtworks.xstream.io.path,
+ com.thoughtworks.xstream.io.xml,
+ com.thoughtworks.xstream.io.xml.xppdom,
+ com.thoughtworks.xstream.mapper,
+ com.thoughtworks.xstream.persistence,
  de.linnk.domain,
  de.linnk.fatclient.application,
  de.linnk.gwt,
  de.linnk.netbeansguis,
+ de.linnk.nx,
  de.linnk.nx.swing,
  de.mxro.filesystem,
  de.mxro.filesystem.ext,
@@ -92,11 +120,9 @@ Import-Package: com.hp.hpl.jena.ontology,
  org.w3c.tidy,
  org.xml.sax,
  org.xml.sax.helpers,
- de.linnk.nx,
  thewebsemantic,
  thewebsemantic.vocabulary
-Embed-Dependency: wizard;inline=false;scope=compile|runtime,thrdXStrea
- m;inline=false;scope=compile|runtime
+Embed-Dependency: wizard;inline=false;scope=compile|runtime
 Bundle-ClassPath: .,
  arq-2.8.2.jar,
  iri-0.8.jar,
@@ -105,7 +131,6 @@ Bundle-ClassPath: .,
  filters-2.0.235.jar,
  javaws-1.1.jar,
  xstream-1.3.1.jar,
- inclBeansSerialization-0.0.2-SNAPSHOT.jar,
  dom4j-1.6.1.jar,
  jaxen-1.0-FCS.jar,
  relaxngDatatype-20050913.jar,

@@ -13,7 +13,6 @@
 	<classpathentry kind="lib" path="filters-2.0.235.jar" sourcepath="M:/LocalMavenRepository/repository/com/jhlabs/filters/2.0.235/filters-2.0.235-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="javaws-1.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="xstream-1.3.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="inclBeansSerialization-0.0.2-SNAPSHOT.jar"/>
 	<classpathentry exported="true" kind="lib" path="dom4j-1.6.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="jaxen-1.0-FCS.jar"/>
 	<classpathentry exported="true" kind="lib" path="relaxngDatatype-20050913.jar"/>
