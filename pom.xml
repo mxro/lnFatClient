@@ -224,28 +224,7 @@
 				project folder. There the Maven eclipse plugin will add them to the classpath 
 				of PDE projects. -->
 			<plugin>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>process-sources</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${basedir}</outputDirectory>
-							<overWriteReleases>false</overWriteReleases>
-							<overWriteSnapshots>false</overWriteSnapshots>
-							<overWriteIfNewer>true</overWriteIfNewer>
-						</configuration>
-					</execution>
-					<!-- for eclipse pde <execution> <id>copy-dependencies2</id> <phase>process-sources</phase> 
-						<goals> <goal>copy-dependencies</goal> </goals> <configuration> <includeArtifactIds>inclXStream,wizard</includeArtifactIds> 
-						<outputDirectory>${basedir}/target/dependency</outputDirectory> <overWriteReleases>false</overWriteReleases> 
-						<overWriteSnapshots>false</overWriteSnapshots> <overWriteIfNewer>true</overWriteIfNewer> 
-						</configuration> </execution> -->
-				</executions>
-			</plugin>
+				<artifactId>maven-dependency-plugin</artifactId></plugin>
 
 			<!-- Cleanup necessary because of PDE tweaks, clear the project directory -->
 			<plugin>
@@ -337,21 +316,8 @@
 		</resources>
 
 
-	</build>
+	<extensions><extension><groupId>org.apache.maven.wagon</groupId><artifactId>wagon-ssh-external</artifactId><version>2.5</version></extension><extension><groupId>org.apache.maven.wagon</groupId><artifactId>wagon-ssh</artifactId><version>2.5</version></extension></extensions></build>
 
 	<!-- DISTRIBUTION MANAGEMENT -->
-	<distributionManagement>
-		<repository>
-			<id>releases</id>
-			<name>Internal Releases</name>
-			<url>http://internal1.nxweb.de:8080/nexus/content/repositories/releases
-			</url>
-		</repository>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>Internal Snapshots</name>
-			<url>http://internal1.nxweb.de:8080/nexus/content/repositories/snapshots
-			</url>
-		</snapshotRepository>
-	</distributionManagement>
+	<distributionManagement><repository><id>appjangle-releases</id><url>${repos.appjangle-releases}</url></repository><snapshotRepository><id>mvn1-appjangle</id><url>${repos.mvn1-appjangle}</url></snapshotRepository></distributionManagement>
 </project>
